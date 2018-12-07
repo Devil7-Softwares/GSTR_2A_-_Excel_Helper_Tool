@@ -259,3 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/GSTR 2A - Excel Helper Tool/My Project/licenses.licx
