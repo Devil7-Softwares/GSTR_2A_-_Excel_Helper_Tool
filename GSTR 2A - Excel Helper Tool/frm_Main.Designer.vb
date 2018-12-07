@@ -21,19 +21,19 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
-        Me.rp_Home = New DevExpress.XtraBars.Ribbon.RibbonPage()
-        Me.rpg_CompareList = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
-        Me.gc_CompareList = New DevExpress.XtraGrid.GridControl()
-        Me.gv_CompareList = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.btn_Add = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Edit = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Remove = New DevExpress.XtraBars.BarButtonItem()
-        Me.rpg_Compare = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.btn_SaveSeparate = New DevExpress.XtraBars.BarButtonItem()
-        Me.rpg_Options = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.btn_SelectFolder = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Compare = New DevExpress.XtraBars.BarButtonItem()
+        Me.rp_Home = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.rpg_CompareList = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.rpg_Options = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.rpg_Compare = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
+        Me.gc_CompareList = New DevExpress.XtraGrid.GridControl()
+        Me.gv_CompareList = New DevExpress.XtraGrid.Views.Grid.GridView()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gc_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,6 +50,48 @@ Partial Class frm_Main
         Me.RibbonControl.Size = New System.Drawing.Size(699, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         '
+        'btn_Add
+        '
+        Me.btn_Add.Caption = "Add"
+        Me.btn_Add.Id = 1
+        Me.btn_Add.ImageOptions.SvgImage = CType(resources.GetObject("btn_Add.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Add.Name = "btn_Add"
+        '
+        'btn_Edit
+        '
+        Me.btn_Edit.Caption = "Edit"
+        Me.btn_Edit.Id = 2
+        Me.btn_Edit.ImageOptions.SvgImage = CType(resources.GetObject("btn_Edit.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Edit.Name = "btn_Edit"
+        '
+        'btn_Remove
+        '
+        Me.btn_Remove.Caption = "Remove"
+        Me.btn_Remove.Id = 3
+        Me.btn_Remove.ImageOptions.SvgImage = CType(resources.GetObject("btn_Remove.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Remove.Name = "btn_Remove"
+        '
+        'btn_SaveSeparate
+        '
+        Me.btn_SaveSeparate.Caption = "Save Result in Separate File"
+        Me.btn_SaveSeparate.Id = 4
+        Me.btn_SaveSeparate.ImageOptions.SvgImage = CType(resources.GetObject("btn_SaveSeparate.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_SaveSeparate.Name = "btn_SaveSeparate"
+        '
+        'btn_SelectFolder
+        '
+        Me.btn_SelectFolder.Caption = "Select Folder"
+        Me.btn_SelectFolder.Id = 5
+        Me.btn_SelectFolder.ImageOptions.SvgImage = CType(resources.GetObject("btn_SelectFolder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_SelectFolder.Name = "btn_SelectFolder"
+        '
+        'btn_Compare
+        '
+        Me.btn_Compare.Caption = "Start"
+        Me.btn_Compare.Id = 6
+        Me.btn_Compare.ImageOptions.SvgImage = CType(resources.GetObject("btn_Compare.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Compare.Name = "btn_Compare"
+        '
         'rp_Home
         '
         Me.rp_Home.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.rpg_CompareList, Me.rpg_Options, Me.rpg_Compare})
@@ -64,6 +106,20 @@ Partial Class frm_Main
         Me.rpg_CompareList.Name = "rpg_CompareList"
         Me.rpg_CompareList.ShowCaptionButton = False
         Me.rpg_CompareList.Text = "Comapre List"
+        '
+        'rpg_Options
+        '
+        Me.rpg_Options.ItemLinks.Add(Me.btn_SaveSeparate)
+        Me.rpg_Options.ItemLinks.Add(Me.btn_SelectFolder)
+        Me.rpg_Options.Name = "rpg_Options"
+        Me.rpg_Options.Text = "Options"
+        '
+        'rpg_Compare
+        '
+        Me.rpg_Compare.ItemLinks.Add(Me.btn_Compare)
+        Me.rpg_Compare.Name = "rpg_Compare"
+        Me.rpg_Compare.ShowCaptionButton = False
+        Me.rpg_Compare.Text = "Compare"
         '
         'RibbonStatusBar
         '
@@ -91,62 +147,6 @@ Partial Class frm_Main
         Me.gv_CompareList.OptionsBehavior.ReadOnly = True
         Me.gv_CompareList.OptionsSelection.MultiSelect = True
         Me.gv_CompareList.OptionsView.ShowGroupPanel = False
-        '
-        'btn_Add
-        '
-        Me.btn_Add.Caption = "Add"
-        Me.btn_Add.Id = 1
-        Me.btn_Add.ImageOptions.SvgImage = CType(resources.GetObject("btn_Add.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Add.Name = "btn_Add"
-        '
-        'btn_Edit
-        '
-        Me.btn_Edit.Caption = "Edit"
-        Me.btn_Edit.Id = 2
-        Me.btn_Edit.ImageOptions.SvgImage = CType(resources.GetObject("btn_Edit.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Edit.Name = "btn_Edit"
-        '
-        'btn_Remove
-        '
-        Me.btn_Remove.Caption = "Remove"
-        Me.btn_Remove.Id = 3
-        Me.btn_Remove.ImageOptions.SvgImage = CType(resources.GetObject("btn_Remove.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Remove.Name = "btn_Remove"
-        '
-        'rpg_Compare
-        '
-        Me.rpg_Compare.ItemLinks.Add(Me.btn_Compare)
-        Me.rpg_Compare.Name = "rpg_Compare"
-        Me.rpg_Compare.ShowCaptionButton = False
-        Me.rpg_Compare.Text = "Compare"
-        '
-        'btn_SaveSeparate
-        '
-        Me.btn_SaveSeparate.Caption = "Save Result in Separate File"
-        Me.btn_SaveSeparate.Id = 4
-        Me.btn_SaveSeparate.ImageOptions.SvgImage = CType(resources.GetObject("btn_SaveSeparate.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_SaveSeparate.Name = "btn_SaveSeparate"
-        '
-        'rpg_Options
-        '
-        Me.rpg_Options.ItemLinks.Add(Me.btn_SaveSeparate)
-        Me.rpg_Options.ItemLinks.Add(Me.btn_SelectFolder)
-        Me.rpg_Options.Name = "rpg_Options"
-        Me.rpg_Options.Text = "Options"
-        '
-        'btn_SelectFolder
-        '
-        Me.btn_SelectFolder.Caption = "Select Folder"
-        Me.btn_SelectFolder.Id = 5
-        Me.btn_SelectFolder.ImageOptions.SvgImage = CType(resources.GetObject("btn_SelectFolder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_SelectFolder.Name = "btn_SelectFolder"
-        '
-        'btn_Compare
-        '
-        Me.btn_Compare.Caption = "Start"
-        Me.btn_Compare.Id = 6
-        Me.btn_Compare.ImageOptions.SvgImage = CType(resources.GetObject("btn_Compare.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Compare.Name = "btn_Compare"
         '
         'frm_Main
         '
