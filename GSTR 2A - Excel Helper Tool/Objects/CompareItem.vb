@@ -29,8 +29,8 @@ Namespace Objects
         <Description("GSTR 2A Excel File Downloaded from GST Website.")>
         Property GSTR2A As String
 
-        <DisplayName("GSTR2A Excel")>
-        <Description("GSTR 1A Excel Template Used to Upload GSTR 1")>
+        <DisplayName("GSTR2 Excel")>
+        <Description("GSTR 2 Excel Template Used to Upload GSTR 2")>
         Property GSTR2 As String
 
         Dim GSTR2Data_ As List(Of GSTR.Party)

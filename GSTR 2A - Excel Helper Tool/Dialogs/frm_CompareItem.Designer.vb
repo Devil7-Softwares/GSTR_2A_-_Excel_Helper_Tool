@@ -40,7 +40,7 @@
             Me.lbl_GSTR2.Name = "lbl_GSTR2"
             Me.lbl_GSTR2.Size = New System.Drawing.Size(70, 13)
             Me.lbl_GSTR2.TabIndex = 0
-            Me.lbl_GSTR2.Text = "GSTR 1 Excel :"
+            Me.lbl_GSTR2.Text = "GSTR 2 Excel :"
             '
             'lbl_GSTR2A
             '
