@@ -88,9 +88,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.GSTR_2A___Excel_Helper_Tool.My.MySettings
+        Friend ReadOnly Property Settings() As Global.Devil7.Automation.GST.My.MySettings
             Get
-                Return Global.GSTR_2A___Excel_Helper_Tool.My.MySettings.Default
+                Return Global.Devil7.Automation.GST.My.MySettings.Default
             End Get
         End Property
     End Module
