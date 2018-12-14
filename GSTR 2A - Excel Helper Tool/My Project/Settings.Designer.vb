@@ -65,6 +65,18 @@ Namespace My
                 Me("Skin") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property ExcelSaveFolder() As String
+            Get
+                Return CType(Me("ExcelSaveFolder"),String)
+            End Get
+            Set
+                Me("ExcelSaveFolder") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -42,7 +42,6 @@ Public Class frm_Main
     Private Sub EnableControls()
         rpg_Compare.Enabled = True
         rpg_CompareList.Enabled = True
-        rpg_Options.Enabled = True
 
         ProgressPanel_Loading.Visible = False
     End Sub
@@ -50,7 +49,6 @@ Public Class frm_Main
     Private Sub DisableControls()
         rpg_Compare.Enabled = False
         rpg_CompareList.Enabled = False
-        rpg_Options.Enabled = False
 
         ProgressPanel_Loading.Visible = True
     End Sub
