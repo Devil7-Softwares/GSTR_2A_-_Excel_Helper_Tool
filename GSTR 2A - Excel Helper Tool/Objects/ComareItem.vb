@@ -18,6 +18,7 @@
 '     Dineshkumar T                                                        '
 '=========================================================================='
 
+Imports DevExpress.Spreadsheet
 Imports System.ComponentModel
 
 Namespace Objects
@@ -31,12 +32,37 @@ Namespace Objects
         <DisplayName("GSTR1A Excel")>
         <Description("GSTR 1A Excel Template Used to Upload GSTR 1")>
         Property GSTR1 As String
+
+        Dim GSTR1Data_ As List(Of GSTR.Party)
+        <Browsable(False)>
+        ReadOnly Property GSTR1Data As List(Of GSTR.Party)
+            Get
+                Return GSTR1Data_
+            End Get
+        End Property
+
+        Dim GSTR2AData_ As List(Of GSTR.Party)
+        <Browsable(False)>
+        ReadOnly Property GSTR2AData As List(Of GSTR.Party)
+            Get
+                Return GSTR2AData_
+            End Get
+        End Property
 #End Region
 
 #Region "Subs"
         Sub New(ByVal GSTR1 As String, ByVal GSTR2A As String)
             Me.GSTR1 = GSTR1
             Me.GSTR2A = GSTR2A
+        End Sub
+
+        Sub LoadData(ByVal WB_GSTR1 As Workbook, ByVal WB_GSTR2A As Workbook)
+            If GSTR1 <> "" AndAlso My.Computer.FileSystem.FileExists(GSTR1) Then
+                GSTR1Data_ = PublicFunctions.ReadGSTR2_B2B(WB_GSTR1)
+            End If
+            If GSTR2A <> "" AndAlso My.Computer.FileSystem.FileExists(GSTR2A) Then
+                GSTR2AData_ = PublicFunctions.ReadGSTR2A_B2B(WB_GSTR2A)
+            End If
         End Sub
 #End Region
 
