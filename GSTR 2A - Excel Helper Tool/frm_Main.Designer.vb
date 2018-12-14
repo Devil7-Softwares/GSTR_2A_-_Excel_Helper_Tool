@@ -25,9 +25,11 @@ Partial Class frm_Main
         Me.btn_Edit = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Remove = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Compare = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_UnwantedRowsRemover = New DevExpress.XtraBars.BarButtonItem()
         Me.rp_Home = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.rpg_CompareList = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpg_Compare = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.rpg_Misc = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.gc_CompareList = New DevExpress.XtraGrid.GridControl()
         Me.gv_CompareList = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -42,8 +44,6 @@ Partial Class frm_Main
         Me.gc_GSTR2A = New DevExpress.XtraGrid.GridControl()
         Me.gv_GSTR2A = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.Worker_Loader = New System.ComponentModel.BackgroundWorker()
-        Me.rpg_Misc = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.btn_UnwantedRowsRemover = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gc_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,6 +104,13 @@ Partial Class frm_Main
         Me.btn_Compare.ImageOptions.SvgImage = CType(resources.GetObject("btn_Compare.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Compare.Name = "btn_Compare"
         '
+        'btn_UnwantedRowsRemover
+        '
+        Me.btn_UnwantedRowsRemover.Caption = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Unwanted Rows"
+        Me.btn_UnwantedRowsRemover.Id = 8
+        Me.btn_UnwantedRowsRemover.ImageOptions.SvgImage = CType(resources.GetObject("btn_UnwantedRowsRemover.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_UnwantedRowsRemover.Name = "btn_UnwantedRowsRemover"
+        '
         'rp_Home
         '
         Me.rp_Home.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.rpg_CompareList, Me.rpg_Compare, Me.rpg_Misc})
@@ -125,6 +132,12 @@ Partial Class frm_Main
         Me.rpg_Compare.Name = "rpg_Compare"
         Me.rpg_Compare.ShowCaptionButton = False
         Me.rpg_Compare.Text = "Compare"
+        '
+        'rpg_Misc
+        '
+        Me.rpg_Misc.ItemLinks.Add(Me.btn_UnwantedRowsRemover)
+        Me.rpg_Misc.Name = "rpg_Misc"
+        Me.rpg_Misc.Text = "Misc"
         '
         'RibbonStatusBar
         '
@@ -162,7 +175,7 @@ Partial Class frm_Main
         Me.ProgressPanel_Loading.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ProgressPanel_Loading.Location = New System.Drawing.Point(0, 143)
         Me.ProgressPanel_Loading.Name = "ProgressPanel_Loading"
-        Me.ProgressPanel_Loading.Size = New System.Drawing.Size(699, 306)
+        Me.ProgressPanel_Loading.Size = New System.Drawing.Size(699, 275)
         Me.ProgressPanel_Loading.TabIndex = 8
         Me.ProgressPanel_Loading.Visible = False
         '
@@ -250,27 +263,14 @@ Partial Class frm_Main
         'Worker_Loader
         '
         '
-        'rpg_Misc
-        '
-        Me.rpg_Misc.ItemLinks.Add(Me.btn_UnwantedRowsRemover)
-        Me.rpg_Misc.Name = "rpg_Misc"
-        Me.rpg_Misc.Text = "Misc"
-        '
-        'btn_UnwantedRowsRemover
-        '
-        Me.btn_UnwantedRowsRemover.Caption = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Unwanted Rows"
-        Me.btn_UnwantedRowsRemover.Id = 8
-        Me.btn_UnwantedRowsRemover.ImageOptions.SvgImage = CType(resources.GetObject("btn_UnwantedRowsRemover.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_UnwantedRowsRemover.Name = "btn_UnwantedRowsRemover"
-        '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(699, 449)
+        Me.Controls.Add(Me.ProgressPanel_Loading)
         Me.Controls.Add(Me.tc_Main)
         Me.Controls.Add(Me.RibbonStatusBar)
-        Me.Controls.Add(Me.ProgressPanel_Loading)
         Me.Controls.Add(Me.RibbonControl)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_Main"
