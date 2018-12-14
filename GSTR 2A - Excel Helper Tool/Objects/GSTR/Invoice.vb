@@ -42,7 +42,7 @@ Namespace Objects.GSTR
             Get
                 Dim Total As Double = 0
                 For Each i As Item In Items
-                    Total = i.TaxableValue + (i.TaxableValue * i.Rate / 100)
+                    Total += i.TaxableValue + (i.TaxableValue * i.Rate / 100)
                 Next
                 Return Total
             End Get
