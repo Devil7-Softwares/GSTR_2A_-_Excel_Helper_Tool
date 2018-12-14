@@ -24,13 +24,13 @@ Namespace Dialogs
     Public Class frm_CompareItem
 
 #Region "Properties"
-        Property CompareItem As Objects.ComareItem
+        Property CompareItem As Objects.CompareItem
 #End Region
 
 #Region "Form Events"
         Private Sub frm_CompareItem_Load(sender As Object, e As EventArgs) Handles Me.Load
             If CompareItem IsNot Nothing Then
-                txt_GSTR1.Text = CompareItem.GSTR1
+                txt_GSTR2.Text = CompareItem.GSTR2
                 txt_GSTR2A.Text = CompareItem.GSTR2A
             End If
         End Sub
@@ -38,22 +38,22 @@ Namespace Dialogs
 
 #Region "Button Events"
         Private Sub btn_Done_Click(sender As Object, e As EventArgs) Handles btn_Done.Click
-            If txt_GSTR1.Text.Trim = "" OrElse Not My.Computer.FileSystem.FileExists(txt_GSTR1.Text) Then
-                MsgBox("Invalid target GSTR1 file.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+            If txt_GSTR2.Text.Trim = "" OrElse Not My.Computer.FileSystem.FileExists(txt_GSTR2.Text) Then
+                MsgBox("Invalid target GSTR2 file.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Exit Sub
             End If
             If txt_GSTR2A.Text.Trim = "" OrElse Not My.Computer.FileSystem.FileExists(txt_GSTR2A.Text) Then
                 MsgBox("Invalid target GSTR2A file.", MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
                 Exit Sub
             End If
-            CompareItem = New Objects.ComareItem(txt_GSTR1.Text, txt_GSTR2A.Text)
+            CompareItem = New Objects.CompareItem(txt_GSTR2.Text, txt_GSTR2A.Text)
             DialogResult = DialogResult.OK
             Close()
         End Sub
 
-        Private Sub txt_GSTR1_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles txt_GSTR1.ButtonClick
+        Private Sub txt_GSTR2_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles txt_GSTR2.ButtonClick
             If browse_Excel.ShowDialog = DialogResult.OK Then
-                txt_GSTR1.Text = browse_Excel.FileName
+                txt_GSTR2.Text = browse_Excel.FileName
             End If
         End Sub
 

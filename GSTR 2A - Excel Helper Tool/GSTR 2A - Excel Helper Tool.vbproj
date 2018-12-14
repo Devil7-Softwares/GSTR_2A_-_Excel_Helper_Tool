@@ -118,7 +118,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Objects\ComareItem.vb" />
+    <Compile Include="Objects\CompareItem.vb" />
     <Compile Include="Objects\ComparableEntry.vb" />
     <Compile Include="Objects\GSTR\Invoice.vb" />
     <Compile Include="Objects\GSTR\Item.vb" />

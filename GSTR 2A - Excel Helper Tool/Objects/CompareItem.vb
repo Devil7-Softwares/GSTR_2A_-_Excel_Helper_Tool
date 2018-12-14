@@ -22,22 +22,22 @@ Imports DevExpress.Spreadsheet
 Imports System.ComponentModel
 
 Namespace Objects
-    Public Class ComareItem
+    Public Class CompareItem
 
 #Region "Properties"
         <DisplayName("GSTR2A Excel")>
         <Description("GSTR 2A Excel File Downloaded from GST Website.")>
         Property GSTR2A As String
 
-        <DisplayName("GSTR1A Excel")>
+        <DisplayName("GSTR2A Excel")>
         <Description("GSTR 1A Excel Template Used to Upload GSTR 1")>
-        Property GSTR1 As String
+        Property GSTR2 As String
 
-        Dim GSTR1Data_ As List(Of GSTR.Party)
+        Dim GSTR2Data_ As List(Of GSTR.Party)
         <Browsable(False)>
-        ReadOnly Property GSTR1Data As List(Of GSTR.Party)
+        ReadOnly Property GSTR2Data As List(Of GSTR.Party)
             Get
-                Return GSTR1Data_
+                Return GSTR2Data_
             End Get
         End Property
 
@@ -51,14 +51,14 @@ Namespace Objects
 #End Region
 
 #Region "Subs"
-        Sub New(ByVal GSTR1 As String, ByVal GSTR2A As String)
-            Me.GSTR1 = GSTR1
+        Sub New(ByVal GSTR2 As String, ByVal GSTR2A As String)
+            Me.GSTR2 = GSTR2
             Me.GSTR2A = GSTR2A
         End Sub
 
-        Sub LoadData(ByVal WB_GSTR1 As Workbook, ByVal WB_GSTR2A As Workbook)
-            If GSTR1 <> "" AndAlso My.Computer.FileSystem.FileExists(GSTR1) Then
-                GSTR1Data_ = PublicFunctions.ReadGSTR2_B2B(WB_GSTR1)
+        Sub LoadData(ByVal WB_GSTR2 As Workbook, ByVal WB_GSTR2A As Workbook)
+            If GSTR2 <> "" AndAlso My.Computer.FileSystem.FileExists(GSTR2) Then
+                GSTR2Data_ = PublicFunctions.ReadGSTR2_B2B(WB_GSTR2)
             End If
             If GSTR2A <> "" AndAlso My.Computer.FileSystem.FileExists(GSTR2A) Then
                 GSTR2AData_ = PublicFunctions.ReadGSTR2A_B2B(WB_GSTR2A)

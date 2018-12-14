@@ -28,12 +28,12 @@ Public Class frm_Main
 #End Region
 
 #Region "Properties"
-    ReadOnly Property CompareList As List(Of Objects.ComareItem)
+    ReadOnly Property CompareList As List(Of Objects.CompareItem)
         Get
             If gc_CompareList.DataSource Is Nothing Then
-                gc_CompareList.DataSource = New List(Of Objects.ComareItem)
+                gc_CompareList.DataSource = New List(Of Objects.CompareItem)
             End If
-            Return CType(gc_CompareList.DataSource, List(Of Objects.ComareItem))
+            Return CType(gc_CompareList.DataSource, List(Of Objects.CompareItem))
         End Get
     End Property
 #End Region
@@ -67,7 +67,7 @@ Public Class frm_Main
 
 #Region "Form Events"
     Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        gc_CompareList.DataSource = New List(Of Objects.ComareItem)
+        gc_CompareList.DataSource = New List(Of Objects.CompareItem)
     End Sub
 #End Region
 
@@ -83,11 +83,11 @@ Public Class frm_Main
 
     Private Sub btn_Edit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_Edit.ItemClick
         If gv_CompareList.GetSelectedRows.Count = 1 Then
-            Dim Item As Objects.ComareItem = gv_CompareList.GetRow(gv_CompareList.GetSelectedRows(0))
+            Dim Item As Objects.CompareItem = gv_CompareList.GetRow(gv_CompareList.GetSelectedRows(0))
             Dim D As New Dialogs.frm_CompareItem
             D.CompareItem = Item
             If D.ShowDialog = DialogResult.OK Then
-                Item.GSTR1 = D.CompareItem.GSTR1
+                Item.GSTR2 = D.CompareItem.GSTR2
                 Item.GSTR2A = D.CompareItem.GSTR2A
                 LastUpdatedItemIndex = CompareList.IndexOf(D.CompareItem)
                 Worker_Loader.RunWorkerAsync()
@@ -97,11 +97,11 @@ Public Class frm_Main
 
     Private Sub btn_Remove_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_Remove.ItemClick
         If gv_CompareList.GetSelectedRows.Count > 0 Then
-            Dim toRemove As New List(Of Objects.ComareItem)
+            Dim toRemove As New List(Of Objects.CompareItem)
             For Each i As Integer In gv_CompareList.GetSelectedRows
                 toRemove.Add(gv_CompareList.GetRow(i))
             Next
-            For Each i As Objects.ComareItem In toRemove
+            For Each i As Objects.CompareItem In toRemove
                 CompareList.Remove(i)
             Next
             gc_CompareList.RefreshDataSource()
@@ -125,13 +125,13 @@ Public Class frm_Main
         For ItemIndex As Integer = 0 To CompareList.Count - 1
             UpdateProgress(String.Format("Comparing Items {0} of {1}, Please Wait...", ItemIndex + 1, CompareList.Count), "")
 
-            Dim Item As Objects.ComareItem = CompareList(ItemIndex)
-            If My.Computer.FileSystem.FileExists(Item.GSTR1) AndAlso My.Computer.FileSystem.FileExists(Item.GSTR2A) Then
+            Dim Item As Objects.CompareItem = CompareList(ItemIndex)
+            If My.Computer.FileSystem.FileExists(Item.GSTR2) AndAlso My.Computer.FileSystem.FileExists(Item.GSTR2A) Then
                 Dim GSTR2 As New Workbook
                 Dim GSTR2A As New Workbook
 
                 UpdateProgress("", "Loading Workbooks...")
-                GSTR2.LoadDocument(Item.GSTR1)
+                GSTR2.LoadDocument(Item.GSTR2)
                 GSTR2A.LoadDocument(Item.GSTR2A)
 
                 UpdateProgress("", "Reading Entries...")
@@ -140,7 +140,7 @@ Public Class frm_Main
                 PublicFunctions.Compare(GSTR2_B2B, GSTR2A_B2B)
 
                 UpdateProgress("", "Saving Workbooks...")
-                GSTR2.SaveDocument(Item.GSTR1)
+                GSTR2.SaveDocument(Item.GSTR2)
                 GSTR2A.SaveDocument(Item.GSTR2A)
 
                 If GSTR2.IsDisposed = False Then GSTR2.Dispose()
@@ -153,8 +153,8 @@ Public Class frm_Main
 
     Private Sub gv_CompareList_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles gv_CompareList.SelectionChanged
         If gv_CompareList.SelectedRowsCount > 0 Then
-            Dim CompareItem As Objects.ComareItem = gv_CompareList.GetRow(gv_CompareList.GetSelectedRows(0))
-            gc_GSTR2.DataSource = CompareItem.GSTR1Data
+            Dim CompareItem As Objects.CompareItem = gv_CompareList.GetRow(gv_CompareList.GetSelectedRows(0))
+            gc_GSTR2.DataSource = CompareItem.GSTR2Data
             gc_GSTR2A.DataSource = CompareItem.GSTR2AData
         End If
     End Sub
@@ -164,18 +164,18 @@ Public Class frm_Main
 
         UpdateProgress("Please Wait...", "")
 
-        Dim Item As Objects.ComareItem = CompareList(LastUpdatedItemIndex)
+        Dim Item As Objects.CompareItem = CompareList(LastUpdatedItemIndex)
         If Item IsNot Nothing Then
             Dim GSTR2 As New Workbook
             Dim GSTR2A As New Workbook
 
             UpdateProgress("", "Loading Workbooks...")
-            GSTR2.LoadDocument(Item.GSTR1)
+            GSTR2.LoadDocument(Item.GSTR2)
             GSTR2A.LoadDocument(Item.GSTR2A)
 
             UpdateProgress("", "Reading Entries...")
             Item.LoadData(GSTR2, GSTR2A)
-            For Each i As Objects.GSTR.Party In Item.GSTR1Data
+            For Each i As Objects.GSTR.Party In Item.GSTR2Data
 
             Next
 

@@ -24,23 +24,23 @@
         <System.Diagnostics.DebuggerStepThrough()>
         Private Sub InitializeComponent()
             Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_CompareItem))
-            Me.lbl_GSTR1 = New DevExpress.XtraEditors.LabelControl()
+            Me.lbl_GSTR2 = New DevExpress.XtraEditors.LabelControl()
             Me.lbl_GSTR2A = New DevExpress.XtraEditors.LabelControl()
-            Me.txt_GSTR1 = New DevExpress.XtraEditors.ButtonEdit()
+            Me.txt_GSTR2 = New DevExpress.XtraEditors.ButtonEdit()
             Me.txt_GSTR2A = New DevExpress.XtraEditors.ButtonEdit()
             Me.browse_Excel = New System.Windows.Forms.OpenFileDialog()
             Me.btn_Done = New DevExpress.XtraEditors.SimpleButton()
-            CType(Me.txt_GSTR1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.txt_GSTR2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.txt_GSTR2A.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             '
-            'lbl_GSTR1
+            'lbl_GSTR2
             '
-            Me.lbl_GSTR1.Location = New System.Drawing.Point(19, 15)
-            Me.lbl_GSTR1.Name = "lbl_GSTR1"
-            Me.lbl_GSTR1.Size = New System.Drawing.Size(70, 13)
-            Me.lbl_GSTR1.TabIndex = 0
-            Me.lbl_GSTR1.Text = "GSTR 1 Excel :"
+            Me.lbl_GSTR2.Location = New System.Drawing.Point(19, 15)
+            Me.lbl_GSTR2.Name = "lbl_GSTR2"
+            Me.lbl_GSTR2.Size = New System.Drawing.Size(70, 13)
+            Me.lbl_GSTR2.TabIndex = 0
+            Me.lbl_GSTR2.Text = "GSTR 1 Excel :"
             '
             'lbl_GSTR2A
             '
@@ -50,16 +50,16 @@
             Me.lbl_GSTR2A.TabIndex = 1
             Me.lbl_GSTR2A.Text = "GSTR 2A Excel :"
             '
-            'txt_GSTR1
+            'txt_GSTR2
             '
-            Me.txt_GSTR1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Me.txt_GSTR2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.txt_GSTR1.Location = New System.Drawing.Point(95, 12)
-            Me.txt_GSTR1.Name = "txt_GSTR1"
-            Me.txt_GSTR1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-            Me.txt_GSTR1.Properties.ReadOnly = True
-            Me.txt_GSTR1.Size = New System.Drawing.Size(360, 20)
-            Me.txt_GSTR1.TabIndex = 2
+            Me.txt_GSTR2.Location = New System.Drawing.Point(95, 12)
+            Me.txt_GSTR2.Name = "txt_GSTR2"
+            Me.txt_GSTR2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
+            Me.txt_GSTR2.Properties.ReadOnly = True
+            Me.txt_GSTR2.Size = New System.Drawing.Size(360, 20)
+            Me.txt_GSTR2.TabIndex = 2
             '
             'txt_GSTR2A
             '
@@ -94,9 +94,9 @@
             Me.ClientSize = New System.Drawing.Size(467, 104)
             Me.Controls.Add(Me.btn_Done)
             Me.Controls.Add(Me.txt_GSTR2A)
-            Me.Controls.Add(Me.txt_GSTR1)
+            Me.Controls.Add(Me.txt_GSTR2)
             Me.Controls.Add(Me.lbl_GSTR2A)
-            Me.Controls.Add(Me.lbl_GSTR1)
+            Me.Controls.Add(Me.lbl_GSTR2)
             Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
             Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MaximizeBox = False
@@ -105,16 +105,16 @@
             Me.ShowInTaskbar = False
             Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
             Me.Text = "Compare Item"
-            CType(Me.txt_GSTR1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.txt_GSTR2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             CType(Me.txt_GSTR2A.Properties, System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
         End Sub
 
-        Friend WithEvents lbl_GSTR1 As DevExpress.XtraEditors.LabelControl
+        Friend WithEvents lbl_GSTR2 As DevExpress.XtraEditors.LabelControl
         Friend WithEvents lbl_GSTR2A As DevExpress.XtraEditors.LabelControl
-        Friend WithEvents txt_GSTR1 As DevExpress.XtraEditors.ButtonEdit
+        Friend WithEvents txt_GSTR2 As DevExpress.XtraEditors.ButtonEdit
         Friend WithEvents txt_GSTR2A As DevExpress.XtraEditors.ButtonEdit
         Friend WithEvents browse_Excel As OpenFileDialog
         Friend WithEvents btn_Done As DevExpress.XtraEditors.SimpleButton
