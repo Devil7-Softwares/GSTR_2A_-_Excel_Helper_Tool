@@ -41,6 +41,23 @@ Public Class PublicFunctions
 
         Dim B2BSheet As Worksheet = WorkBook.Worksheets("b2b")
 
+        Try
+            Dim HeaderRow As Row = B2BSheet.Rows(2)
+            For i As Integer = 0 To 20
+                Try
+                    Dim Value As CellValue = HeaderRow.Item(i).Value
+                    If Value.IsText AndAlso Value.TextValue.ToUpper.Contains("TAXABLE") Then
+                        TaxableVal_Index = i
+                        Exit For
+                    End If
+                Catch ex As Exception
+
+                End Try
+            Next
+        Catch ex As Exception
+
+        End Try
+
         Dim R As New List(Of Objects.GSTR.Party)
 
         For Index As Integer = GSTR2_Start_Index To B2BSheet.Rows.LastUsedIndex
