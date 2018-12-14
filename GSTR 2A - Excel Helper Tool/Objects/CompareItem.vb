@@ -25,13 +25,13 @@ Namespace Objects
     Public Class CompareItem
 
 #Region "Properties"
-        <DisplayName("GSTR2A Excel")>
-        <Description("GSTR 2A Excel File Downloaded from GST Website.")>
-        Property GSTR2A As String
-
         <DisplayName("GSTR2 Excel")>
         <Description("GSTR 2 Excel Template Used to Upload GSTR 2")>
         Property GSTR2 As String
+
+        <DisplayName("GSTR2A Excel")>
+        <Description("GSTR 2A Excel File Downloaded from GST Website.")>
+        Property GSTR2A As String
 
         Dim GSTR2Data_ As List(Of GSTR.Party)
         <Browsable(False)>
