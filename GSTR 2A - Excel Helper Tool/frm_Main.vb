@@ -111,6 +111,11 @@ Public Class frm_Main
     Private Sub btn_Compare_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_Compare.ItemClick
         If Not Worker_Comparer.IsBusy Then Worker_Comparer.RunWorkerAsync()
     End Sub
+
+    Private Sub btn_UnwantedRowsRemover_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_UnwantedRowsRemover.ItemClick
+        Dim D As New frm_UnwantedRowRemover
+        D.ShowDialog()
+    End Sub
 #End Region
 
 #Region "Other Events"

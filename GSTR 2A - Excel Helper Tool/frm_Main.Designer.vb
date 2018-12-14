@@ -24,12 +24,9 @@ Partial Class frm_Main
         Me.btn_Add = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Edit = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Remove = New DevExpress.XtraBars.BarButtonItem()
-        Me.btn_SaveSeparate = New DevExpress.XtraBars.BarButtonItem()
-        Me.btn_SelectFolder = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Compare = New DevExpress.XtraBars.BarButtonItem()
         Me.rp_Home = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.rpg_CompareList = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.rpg_Options = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpg_Compare = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.gc_CompareList = New DevExpress.XtraGrid.GridControl()
@@ -45,6 +42,8 @@ Partial Class frm_Main
         Me.gc_GSTR2A = New DevExpress.XtraGrid.GridControl()
         Me.gv_GSTR2A = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.Worker_Loader = New System.ComponentModel.BackgroundWorker()
+        Me.rpg_Misc = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.btn_UnwantedRowsRemover = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gc_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,13 +61,20 @@ Partial Class frm_Main
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_SaveSeparate, Me.btn_SelectFolder, Me.btn_Compare})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_Compare, Me.btn_UnwantedRowsRemover})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 8
+        Me.RibbonControl.MaxItemId = 9
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.rp_Home})
+        Me.RibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RibbonControl.ShowCategoryInCaption = False
+        Me.RibbonControl.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RibbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RibbonControl.ShowPageHeadersInFormCaption = DevExpress.Utils.DefaultBoolean.[False]
+        Me.RibbonControl.ShowToolbarCustomizeItem = False
         Me.RibbonControl.Size = New System.Drawing.Size(699, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
+        Me.RibbonControl.Toolbar.ShowCustomizeItem = False
         '
         'btn_Add
         '
@@ -91,20 +97,6 @@ Partial Class frm_Main
         Me.btn_Remove.ImageOptions.SvgImage = CType(resources.GetObject("btn_Remove.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Remove.Name = "btn_Remove"
         '
-        'btn_SaveSeparate
-        '
-        Me.btn_SaveSeparate.Caption = "Save Result in Separate File"
-        Me.btn_SaveSeparate.Id = 4
-        Me.btn_SaveSeparate.ImageOptions.SvgImage = CType(resources.GetObject("btn_SaveSeparate.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_SaveSeparate.Name = "btn_SaveSeparate"
-        '
-        'btn_SelectFolder
-        '
-        Me.btn_SelectFolder.Caption = "Select Folder"
-        Me.btn_SelectFolder.Id = 5
-        Me.btn_SelectFolder.ImageOptions.SvgImage = CType(resources.GetObject("btn_SelectFolder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_SelectFolder.Name = "btn_SelectFolder"
-        '
         'btn_Compare
         '
         Me.btn_Compare.Caption = "Start"
@@ -114,7 +106,7 @@ Partial Class frm_Main
         '
         'rp_Home
         '
-        Me.rp_Home.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.rpg_CompareList, Me.rpg_Options, Me.rpg_Compare})
+        Me.rp_Home.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.rpg_CompareList, Me.rpg_Compare, Me.rpg_Misc})
         Me.rp_Home.Name = "rp_Home"
         Me.rp_Home.Text = "Home"
         '
@@ -126,13 +118,6 @@ Partial Class frm_Main
         Me.rpg_CompareList.Name = "rpg_CompareList"
         Me.rpg_CompareList.ShowCaptionButton = False
         Me.rpg_CompareList.Text = "Comapre List"
-        '
-        'rpg_Options
-        '
-        Me.rpg_Options.ItemLinks.Add(Me.btn_SaveSeparate)
-        Me.rpg_Options.ItemLinks.Add(Me.btn_SelectFolder)
-        Me.rpg_Options.Name = "rpg_Options"
-        Me.rpg_Options.Text = "Options"
         '
         'rpg_Compare
         '
@@ -265,6 +250,19 @@ Partial Class frm_Main
         'Worker_Loader
         '
         '
+        'rpg_Misc
+        '
+        Me.rpg_Misc.ItemLinks.Add(Me.btn_UnwantedRowsRemover)
+        Me.rpg_Misc.Name = "rpg_Misc"
+        Me.rpg_Misc.Text = "Misc"
+        '
+        'btn_UnwantedRowsRemover
+        '
+        Me.btn_UnwantedRowsRemover.Caption = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Unwanted Rows"
+        Me.btn_UnwantedRowsRemover.Id = 8
+        Me.btn_UnwantedRowsRemover.ImageOptions.SvgImage = CType(resources.GetObject("btn_UnwantedRowsRemover.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_UnwantedRowsRemover.Name = "btn_UnwantedRowsRemover"
+        '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -274,6 +272,7 @@ Partial Class frm_Main
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.ProgressPanel_Loading)
         Me.Controls.Add(Me.RibbonControl)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_Main"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
@@ -304,10 +303,7 @@ Partial Class frm_Main
     Friend WithEvents btn_Add As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btn_Edit As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents btn_Remove As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents btn_SaveSeparate As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents rpg_Compare As DevExpress.XtraBars.Ribbon.RibbonPageGroup
-    Friend WithEvents btn_SelectFolder As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents rpg_Options As DevExpress.XtraBars.Ribbon.RibbonPageGroup
     Friend WithEvents btn_Compare As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ProgressPanel_Loading As DevExpress.XtraWaitForm.ProgressPanel
     Friend WithEvents Worker_Comparer As System.ComponentModel.BackgroundWorker
@@ -320,4 +316,6 @@ Partial Class frm_Main
     Friend WithEvents gc_GSTR2A As DevExpress.XtraGrid.GridControl
     Friend WithEvents gv_GSTR2A As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents Worker_Loader As System.ComponentModel.BackgroundWorker
+    Friend WithEvents btn_UnwantedRowsRemover As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents rpg_Misc As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

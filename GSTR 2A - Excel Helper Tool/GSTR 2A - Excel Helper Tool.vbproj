@@ -91,6 +91,12 @@
     <Compile Include="Dialogs\frm_CompareItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Dialogs\frm_UnwantedRowRemover.designer.vb">
+      <DependentUpon>frm_UnwantedRowRemover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\frm_UnwantedRowRemover.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm_Main.Designer.vb">
       <DependentUpon>frm_Main.vb</DependentUpon>
     </Compile>
@@ -121,6 +127,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\frm_CompareItem.resx">
       <DependentUpon>frm_CompareItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\frm_UnwantedRowRemover.resx">
+      <DependentUpon>frm_UnwantedRowRemover.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.vb</DependentUpon>
