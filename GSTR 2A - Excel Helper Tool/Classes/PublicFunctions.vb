@@ -131,6 +131,8 @@ Public Class PublicFunctions
         Dim Data2 As List(Of Objects.ComparableEntry) = ConvertToComparable(List2)
         CompareLists(Data1, Data2)
         CompareLists(Data2, Data1)
+        CompareInvoiceWithList(List1, Data2)
+        CompareInvoiceWithList(List2, Data1)
     End Sub
 
     Private Shared Function IsEqual(Value1 As Double, Value2 As Double,
@@ -146,19 +148,39 @@ Public Class PublicFunctions
         For Each Item1 As Objects.ComparableEntry In List1
             Dim Item2 As Objects.ComparableEntry = List2.Find(Function(Item) CompareItems(Item, Item1))
             If Item2 Is Nothing Then
-                Item1.SetMatched()
+                Item1.SetMatched(Objects.MatchStatus.NotMatched)
                 Item1.Row.Font.Color = NotMatchedColor
             Else
-                Item1.SetMatched()
+                Item1.SetMatched(Objects.MatchStatus.Matched)
                 Item1.Row.Font.Color = MatchedColor
-                Item2.SetMatched()
+                Item2.SetMatched(Objects.MatchStatus.Matched)
                 Item2.Row.Font.Color = MatchedColor
             End If
         Next
     End Sub
 
+    Private Shared Sub CompareInvoiceWithList(ByVal List1 As List(Of Objects.GSTR.Party), ByVal List2 As List(Of Objects.ComparableEntry))
+        For Each Party In List1
+            For Each Invoice As Objects.GSTR.Invoice In Party.Invoices
+                Dim Item2 As Objects.ComparableEntry = List2.Find(Function(Item) CompareItems(Item, Party, Invoice))
+                If Item2 IsNot Nothing Then
+                    For Each Item As Objects.GSTR.Item In Invoice.Items
+                        Item.Row.Font.Color = MatchedColor
+                    Next
+                    Item2.SetMatched(Objects.MatchStatus.Matched)
+                    Item2.Row.Font.Color = MatchedColor
+                End If
+            Next
+        Next
+    End Sub
+
+    Private Shared Function CompareItems(ByVal Item As Objects.ComparableEntry, ByVal Party As Objects.GSTR.Party, ByVal Invoice As Objects.GSTR.Invoice) As Boolean
+        If (Item.Matched = Objects.MatchStatus.NotMatched) AndAlso Item.GSTIN.ToUpper.Equals(Party.GSTIN.ToUpper) AndAlso Item.InvoiceDate.Equals(Invoice.InvoiceDate) AndAlso IsEqual(Item.InvoiceValue, Invoice.InvoiceValue) Then Return True
+        Return False
+    End Function
+
     Private Shared Function CompareItems(ByVal Item1 As Objects.ComparableEntry, ByVal Item2 As Objects.ComparableEntry) As Boolean
-        If (Not Item1.Matched AndAlso Not Item2.Matched) AndAlso (Item1.GSTIN.ToUpper.Equals(Item2.GSTIN.ToUpper) AndAlso Item1.InvoiceDate.Equals(Item2.InvoiceDate) AndAlso IsEqual(Item1.TaxableValue, Item2.TaxableValue)) Then Return True
+        If (Item1.Matched = Objects.MatchStatus.Unknown AndAlso Item2.Matched = Objects.MatchStatus.Unknown) AndAlso (Item1.GSTIN.ToUpper.Equals(Item2.GSTIN.ToUpper) AndAlso Item1.InvoiceDate.Equals(Item2.InvoiceDate) AndAlso IsEqual(Item1.TaxableValue, Item2.TaxableValue)) Then Return True
         Return False
     End Function
 #End Region
@@ -203,8 +225,9 @@ Public Class PublicFunctions
         Dim R As New List(Of Objects.ComparableEntry)
         For Each Party As Objects.GSTR.Party In List
             For Each Invoice As Objects.GSTR.Invoice In Party.Invoices
+                Dim InvoiceValue As Double = Invoice.InvoiceValue
                 For Each Item As Objects.GSTR.Item In Invoice.Items
-                    R.Add(New Objects.ComparableEntry(Party.GSTIN, Invoice.InvoiceNo, Invoice.InvoiceDate, Item.TaxableValue, Item.Rate, Item.Row))
+                    R.Add(New Objects.ComparableEntry(Party.GSTIN, Invoice.InvoiceNo, Invoice.InvoiceDate, Item.InvoiceValue, Item.TaxableValue, Item.Rate, Item.Row))
                 Next
             Next
         Next

@@ -19,40 +19,9 @@
 '=========================================================================='
 
 Namespace Objects
-    Public Class ComparableEntry
-
-#Region "Properties"
-        ReadOnly Property GSTIN As String
-        ReadOnly Property InvoiceNo As String
-        ReadOnly Property InvoiceDate As Date
-        ReadOnly Property InvoiceValue As Double
-        ReadOnly Property TaxableValue As Double
-        ReadOnly Property TaxRate As Double
-        ReadOnly Property Row As DevExpress.Spreadsheet.Row
-
-        Dim Matched_ As MatchStatus = MatchStatus.Unknown
-        ReadOnly Property Matched As MatchStatus
-            Get
-                Return Matched_
-            End Get
-        End Property
-#End Region
-
-#Region "Subs"
-        Sub New(ByVal GSTIN As String, ByVal InvoiceNo As String, ByVal InvoiceDate As Date, ByVal InvoiceValue As Double, ByVal TaxableValue As Double, ByVal TaxRate As Double, ByVal Row As DevExpress.Spreadsheet.Row)
-            Me.GSTIN = GSTIN
-            Me.InvoiceNo = InvoiceNo
-            Me.InvoiceDate = InvoiceDate
-            Me.InvoiceValue = InvoiceValue
-            Me.TaxableValue = TaxableValue
-            Me.TaxRate = TaxRate
-            Me.Row = Row
-        End Sub
-
-        Sub SetMatched(Optional Value As MatchStatus = MatchStatus.Matched)
-            Matched_ = Value
-        End Sub
-#End Region
-
-    End Class
+    Public Enum MatchStatus As Integer
+        Matched = 1
+        NotMatched = 2
+        Unknown = 0
+    End Enum
 End Namespace

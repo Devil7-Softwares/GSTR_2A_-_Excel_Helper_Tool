@@ -44,6 +44,9 @@ Namespace Objects.GSTR
                 For Each i As Item In Items
                     Total += i.TaxableValue + (i.TaxableValue * i.Rate / 100)
                 Next
+                For Each i As Item In Items
+                    If i.InvoiceValue < Total Then i.SetInvoiceValue(Total)
+                Next
                 Return Total
             End Get
         End Property

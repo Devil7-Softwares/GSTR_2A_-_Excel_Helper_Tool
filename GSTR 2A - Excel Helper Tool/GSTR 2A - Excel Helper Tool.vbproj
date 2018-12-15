@@ -132,6 +132,7 @@
     <Compile Include="Objects\GSTR\Invoice.vb" />
     <Compile Include="Objects\GSTR\Item.vb" />
     <Compile Include="Objects\GSTR\Party.vb" />
+    <Compile Include="Objects\MatchStatus.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\frm_CompareItem.resx">

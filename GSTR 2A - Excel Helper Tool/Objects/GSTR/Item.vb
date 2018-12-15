@@ -28,6 +28,13 @@ Namespace Objects.GSTR
         ReadOnly Property Rate As Double
         ReadOnly Property TaxableValue As Double
 
+        Dim InvoiceValue_ As Double
+        ReadOnly Property InvoiceValue As Double
+            Get
+                Return InvoiceValue_
+            End Get
+        End Property
+
         <Browsable(False)>
         ReadOnly Property Row As Row
 #End Region
@@ -37,6 +44,10 @@ Namespace Objects.GSTR
             Me.Rate = Rate
             Me.TaxableValue = TaxableValue
             Me.Row = Row
+        End Sub
+
+        Sub SetInvoiceValue(ByVal Value As String)
+            InvoiceValue_ = Value
         End Sub
 #End Region
 
