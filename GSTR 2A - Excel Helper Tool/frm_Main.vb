@@ -120,31 +120,36 @@ Public Class frm_Main
     Private Sub Worker_Comparer_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles Worker_Comparer.DoWork
         Invoke(Sub() DisableControls())
 
-        For ItemIndex As Integer = 0 To CompareList.Count - 1
-            UpdateProgress(String.Format("Comparing Items {0} of {1}, Please Wait...", ItemIndex + 1, CompareList.Count), "")
+        Try
+            For ItemIndex As Integer = 0 To CompareList.Count - 1
+                UpdateProgress(String.Format("Comparing Items {0} of {1}, Please Wait...", ItemIndex + 1, CompareList.Count), "")
 
-            Dim Item As Objects.CompareItem = CompareList(ItemIndex)
-            If My.Computer.FileSystem.FileExists(Item.GSTR2) AndAlso My.Computer.FileSystem.FileExists(Item.GSTR2A) Then
-                Dim GSTR2 As New Workbook
-                Dim GSTR2A As New Workbook
+                Dim Item As Objects.CompareItem = CompareList(ItemIndex)
+                If My.Computer.FileSystem.FileExists(Item.GSTR2) AndAlso My.Computer.FileSystem.FileExists(Item.GSTR2A) Then
+                    Dim GSTR2 As New Workbook
+                    Dim GSTR2A As New Workbook
 
-                UpdateProgress("", "Loading Workbooks...")
-                GSTR2.LoadDocument(Item.GSTR2)
-                GSTR2A.LoadDocument(Item.GSTR2A)
+                    UpdateProgress("", "Loading Workbooks...")
+                    GSTR2.LoadDocument(Item.GSTR2)
+                    GSTR2A.LoadDocument(Item.GSTR2A)
 
-                UpdateProgress("", "Reading Entries...")
-                Dim GSTR2_B2B As List(Of Objects.GSTR.Party) = PublicFunctions.ReadGSTR2_B2B(GSTR2)
-                Dim GSTR2A_B2B As List(Of Objects.GSTR.Party) = PublicFunctions.ReadGSTR2A_B2B(GSTR2A)
-                PublicFunctions.Compare(GSTR2_B2B, GSTR2A_B2B)
+                    UpdateProgress("", "Reading Entries...")
+                    Dim GSTR2_B2B As List(Of Objects.GSTR.Party) = PublicFunctions.ReadGSTR2_B2B(GSTR2)
+                    Dim GSTR2A_B2B As List(Of Objects.GSTR.Party) = PublicFunctions.ReadGSTR2A_B2B(GSTR2A)
+                    PublicFunctions.Compare(GSTR2_B2B, GSTR2A_B2B)
 
-                UpdateProgress("", "Saving Workbooks...")
-                GSTR2.SaveDocument(Item.GSTR2)
-                GSTR2A.SaveDocument(Item.GSTR2A)
+                    UpdateProgress("", "Saving Workbooks...")
+                    GSTR2.SaveDocument(Item.GSTR2)
+                    GSTR2A.SaveDocument(Item.GSTR2A)
 
-                If GSTR2.IsDisposed = False Then GSTR2.Dispose()
-                If GSTR2A.IsDisposed = False Then GSTR2A.Dispose()
-            End If
-        Next
+                    If GSTR2.IsDisposed = False Then GSTR2.Dispose()
+                    If GSTR2A.IsDisposed = False Then GSTR2A.Dispose()
+                End If
+            Next
+            MsgBox("Successfully Completed!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "Done")
+        Catch ex As Exception
+            MsgBox("Unable to Complete the Process!" & vbNewLine & ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+        End Try
 
         Invoke(Sub() EnableControls())
     End Sub
