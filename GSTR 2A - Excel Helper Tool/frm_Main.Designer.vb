@@ -19,6 +19,7 @@ Partial Class frm_Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btn_Add = New DevExpress.XtraBars.BarButtonItem()
@@ -44,6 +45,11 @@ Partial Class frm_Main
         Me.gc_GSTR2A = New DevExpress.XtraGrid.GridControl()
         Me.gv_GSTR2A = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.Worker_Loader = New System.ComponentModel.BackgroundWorker()
+        Me.Menu_CompareList = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.btn_Menu_Open_GSTR2_File = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2_Folder = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2A_File = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2A_Folder = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gc_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,14 +62,15 @@ Partial Class frm_Main
         Me.tp_GSTR2A.SuspendLayout()
         CType(Me.gc_GSTR2A, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_GSTR2A, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Menu_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_Compare, Me.btn_UnwantedRowsRemover})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_Compare, Me.btn_UnwantedRowsRemover, Me.btn_Menu_Open_GSTR2_File, Me.btn_Menu_Open_GSTR2_Folder, Me.btn_Menu_Open_GSTR2A_File, Me.btn_Menu_Open_GSTR2A_Folder})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 9
+        Me.RibbonControl.MaxItemId = 13
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.rp_Home})
         Me.RibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
@@ -263,6 +270,43 @@ Partial Class frm_Main
         'Worker_Loader
         '
         '
+        'Menu_CompareList
+        '
+        Me.Menu_CompareList.ItemLinks.Add(Me.btn_Menu_Open_GSTR2_File)
+        Me.Menu_CompareList.ItemLinks.Add(Me.btn_Menu_Open_GSTR2_Folder)
+        Me.Menu_CompareList.ItemLinks.Add(Me.btn_Menu_Open_GSTR2A_File, True)
+        Me.Menu_CompareList.ItemLinks.Add(Me.btn_Menu_Open_GSTR2A_Folder)
+        Me.Menu_CompareList.Name = "Menu_CompareList"
+        Me.Menu_CompareList.Ribbon = Me.RibbonControl
+        '
+        'btn_Menu_Open_GSTR2_File
+        '
+        Me.btn_Menu_Open_GSTR2_File.Caption = "Open GSTR2 File"
+        Me.btn_Menu_Open_GSTR2_File.Id = 9
+        Me.btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2_File.Name = "btn_Menu_Open_GSTR2_File"
+        '
+        'btn_Menu_Open_GSTR2_Folder
+        '
+        Me.btn_Menu_Open_GSTR2_Folder.Caption = "Open Folder of GSTR2 File"
+        Me.btn_Menu_Open_GSTR2_Folder.Id = 10
+        Me.btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2_Folder.Name = "btn_Menu_Open_GSTR2_Folder"
+        '
+        'btn_Menu_Open_GSTR2A_File
+        '
+        Me.btn_Menu_Open_GSTR2A_File.Caption = "Open GSTR2A File"
+        Me.btn_Menu_Open_GSTR2A_File.Id = 11
+        Me.btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2A_File.Name = "btn_Menu_Open_GSTR2A_File"
+        '
+        'btn_Menu_Open_GSTR2A_Folder
+        '
+        Me.btn_Menu_Open_GSTR2A_Folder.Caption = "Open Folder of GSTR2A FIle"
+        Me.btn_Menu_Open_GSTR2A_Folder.Id = 12
+        Me.btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2A_Folder.Name = "btn_Menu_Open_GSTR2A_Folder"
+        '
         'frm_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,6 +333,7 @@ Partial Class frm_Main
         Me.tp_GSTR2A.ResumeLayout(False)
         CType(Me.gc_GSTR2A, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.gv_GSTR2A, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Menu_CompareList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -318,4 +363,9 @@ Partial Class frm_Main
     Friend WithEvents Worker_Loader As System.ComponentModel.BackgroundWorker
     Friend WithEvents btn_UnwantedRowsRemover As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents rpg_Misc As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents Menu_CompareList As DevExpress.XtraBars.PopupMenu
+    Friend WithEvents btn_Menu_Open_GSTR2_File As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btn_Menu_Open_GSTR2_Folder As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btn_Menu_Open_GSTR2A_File As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents btn_Menu_Open_GSTR2A_Folder As DevExpress.XtraBars.BarButtonItem
 End Class

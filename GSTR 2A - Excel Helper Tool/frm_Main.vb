@@ -20,6 +20,8 @@
 
 Imports DevExpress.Data
 Imports DevExpress.Spreadsheet
+Imports DevExpress.XtraBars
+Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class frm_Main
 
@@ -113,6 +115,51 @@ Public Class frm_Main
     Private Sub btn_UnwantedRowsRemover_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles btn_UnwantedRowsRemover.ItemClick
         Dim D As New frm_UnwantedRowRemover
         D.ShowDialog()
+    End Sub
+#End Region
+
+#Region "Menu Events"
+    Private Sub gv_CompareList_PopupMenuShowing(sender As Object, e As PopupMenuShowingEventArgs) Handles gv_CompareList.PopupMenuShowing
+        If e.HitInfo.HitTest = DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitTest.RowCell AndAlso gv_CompareList.SelectedRowsCount > 0 Then
+            e.Allow = False
+            Menu_CompareList.ShowPopup(gc_CompareList.PointToScreen(e.Point))
+        End If
+    End Sub
+
+    Private Sub btn_Menu_Open_GSTR2_File_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btn_Menu_Open_GSTR2_File.ItemClick
+        If gv_CompareList.SelectedRowsCount > 0 Then
+            For Each i As Integer In gv_CompareList.GetSelectedRows
+                Dim Item As Objects.CompareItem = gv_CompareList.GetRow(i)
+                Process.Start(Item.GSTR2)
+            Next
+        End If
+    End Sub
+
+    Private Sub btn_Menu_Open_GSTR2A_File_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btn_Menu_Open_GSTR2A_File.ItemClick
+        If gv_CompareList.SelectedRowsCount > 0 Then
+            For Each i As Integer In gv_CompareList.GetSelectedRows
+                Dim Item As Objects.CompareItem = gv_CompareList.GetRow(i)
+                Process.Start(Item.GSTR2A)
+            Next
+        End If
+    End Sub
+
+    Private Sub btn_Menu_Open_GSTR2_Folder_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btn_Menu_Open_GSTR2_Folder.ItemClick
+        If gv_CompareList.SelectedRowsCount > 0 Then
+            For Each i As Integer In gv_CompareList.GetSelectedRows
+                Dim Item As Objects.CompareItem = gv_CompareList.GetRow(i)
+                Process.Start(My.Computer.FileSystem.GetFileInfo(Item.GSTR2).Directory.FullName)
+            Next
+        End If
+    End Sub
+
+    Private Sub btn_Menu_Open_GSTR2A_Folder_ItemClick(sender As Object, e As ItemClickEventArgs) Handles btn_Menu_Open_GSTR2A_Folder.ItemClick
+        If gv_CompareList.SelectedRowsCount > 0 Then
+            For Each i As Integer In gv_CompareList.GetSelectedRows
+                Dim Item As Objects.CompareItem = gv_CompareList.GetRow(i)
+                Process.Start(My.Computer.FileSystem.GetFileInfo(Item.GSTR2A).Directory.FullName)
+            Next
+        End If
     End Sub
 #End Region
 
