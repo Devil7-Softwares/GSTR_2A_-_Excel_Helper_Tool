@@ -124,6 +124,7 @@ Public Class PublicFunctions
                         Dim InvoiceValue As Double = GetString(Row, InvoiceVal_Index)
                         Dim Rate As Double = GetString(Row, Rate_Index)
                         Dim TaxableValue As Double = GetString(Row, TaxableVal_Index)
+                        If InvoiceNumber.Contains("-Total") Then Continue For
                         AddInvoice(R, GSTIN, InvoiceNumber, InvoiceDate, InvoiceValue, Rate, TaxableValue, Row)
                     End If
                 Catch ex As Exception
