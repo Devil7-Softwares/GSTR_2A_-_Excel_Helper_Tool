@@ -67,6 +67,11 @@ Public Class frm_Main
 
 #Region "Form Events"
     Private Sub frm_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Load a dummy workbook instance to speed up the process when the end-user selects compare item files
+        Using DummySpreadsheet As New Workbook
+            DummySpreadsheet.LoadDocument(My.Resources.dummy)
+        End Using
+
         gc_CompareList.DataSource = New List(Of Objects.CompareItem)
     End Sub
 #End Region
