@@ -167,6 +167,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="Resources\dummy.xlsx" />
+    <None Include="Resources\GSTR2Format.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />

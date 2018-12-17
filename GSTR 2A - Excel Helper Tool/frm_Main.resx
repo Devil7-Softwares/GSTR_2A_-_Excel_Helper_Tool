@@ -216,6 +216,11 @@
         dmVub2RkIiAvPg0KICA8L2c+DQo8L3N2Zz4L
 </value>
   </data>
+  <data name="ToolTipItem13.Text" xml:space="preserve">
+    <value>Start comparing given pair of Items.
+
+Note: The result will be overwritten to the given files itself. Matched items will be marked with 'Green' text color &amp; Unmatched items will be marked with 'Red' text colo</value>
+  </data>
   <data name="btn_UnwantedRowsRemover.ImageOptions.SvgImage" type="DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v18.1" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFlEZXZFeHByZXNzLkRhdGEudjE4LjEsIFZlcnNpb249MTguMS40

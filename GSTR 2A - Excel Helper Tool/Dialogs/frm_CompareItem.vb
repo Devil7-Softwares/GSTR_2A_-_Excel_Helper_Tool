@@ -87,6 +87,12 @@ Namespace Dialogs
                 My.Settings.Save()
             End If
         End Sub
+
+        Private Sub btn_SaveGSTR2_Format_Click(sender As Object, e As EventArgs) Handles btn_SaveGSTR2_Format.Click
+            If save_GSTR2.ShowDialog = DialogResult.OK Then
+                My.Computer.FileSystem.WriteAllBytes(save_GSTR2.FileName, My.Resources.GSTR2Format, False)
+            End If
+        End Sub
 #End Region
 
     End Class

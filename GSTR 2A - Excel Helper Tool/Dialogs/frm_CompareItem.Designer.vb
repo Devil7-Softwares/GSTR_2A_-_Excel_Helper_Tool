@@ -30,6 +30,8 @@
             Me.txt_GSTR2A = New DevExpress.XtraEditors.ButtonEdit()
             Me.browse_Excel = New System.Windows.Forms.OpenFileDialog()
             Me.btn_Done = New DevExpress.XtraEditors.SimpleButton()
+            Me.btn_SaveGSTR2_Format = New DevExpress.XtraEditors.HyperlinkLabelControl()
+            Me.save_GSTR2 = New System.Windows.Forms.SaveFileDialog()
             CType(Me.txt_GSTR2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             CType(Me.txt_GSTR2A.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -61,6 +63,8 @@
             Me.txt_GSTR2.Properties.ReadOnly = True
             Me.txt_GSTR2.Size = New System.Drawing.Size(360, 20)
             Me.txt_GSTR2.TabIndex = 2
+            Me.txt_GSTR2.ToolTip = "Select GSTR2 File that contains the data used to upload & file GSTR2 in given for" &
+    "mat"
             '
             'txt_GSTR2A
             '
@@ -73,6 +77,8 @@
             Me.txt_GSTR2A.Properties.ReadOnly = True
             Me.txt_GSTR2A.Size = New System.Drawing.Size(360, 20)
             Me.txt_GSTR2A.TabIndex = 3
+            Me.txt_GSTR2A.ToolTip = "Select GSTR 2A File downloaded from GST site to match with above given GSTR2 data" &
+    ""
             '
             'browse_Excel
             '
@@ -89,11 +95,25 @@
             Me.btn_Done.TabIndex = 4
             Me.btn_Done.Text = "Done"
             '
+            'btn_SaveGSTR2_Format
+            '
+            Me.btn_SaveGSTR2_Format.Location = New System.Drawing.Point(278, 71)
+            Me.btn_SaveGSTR2_Format.Name = "btn_SaveGSTR2_Format"
+            Me.btn_SaveGSTR2_Format.Size = New System.Drawing.Size(96, 13)
+            Me.btn_SaveGSTR2_Format.TabIndex = 5
+            Me.btn_SaveGSTR2_Format.Text = "Save GSTR2 Format"
+            '
+            'save_GSTR2
+            '
+            Me.save_GSTR2.FileName = "GSTR2 Format.xlsx"
+            Me.save_GSTR2.Filter = "Microsoft Excel Spreadsheet Files (*.xlsx)|*.xlsx"
+            '
             'frm_CompareItem
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.ClientSize = New System.Drawing.Size(467, 104)
+            Me.Controls.Add(Me.btn_SaveGSTR2_Format)
             Me.Controls.Add(Me.btn_Done)
             Me.Controls.Add(Me.txt_GSTR2A)
             Me.Controls.Add(Me.txt_GSTR2)
@@ -120,5 +140,7 @@
         Friend WithEvents txt_GSTR2A As DevExpress.XtraEditors.ButtonEdit
         Friend WithEvents browse_Excel As OpenFileDialog
         Friend WithEvents btn_Done As DevExpress.XtraEditors.SimpleButton
+        Friend WithEvents btn_SaveGSTR2_Format As DevExpress.XtraEditors.HyperlinkLabelControl
+        Friend WithEvents save_GSTR2 As SaveFileDialog
     End Class
 End Namespace

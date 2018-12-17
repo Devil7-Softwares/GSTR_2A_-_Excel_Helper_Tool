@@ -21,12 +21,43 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
+        Dim SuperToolTip10 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem10 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem11 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem16 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem17 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip18 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem18 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btn_Add = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Edit = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Remove = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Compare = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_UnwantedRowsRemover = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2_File = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2_Folder = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2A_File = New DevExpress.XtraBars.BarButtonItem()
+        Me.btn_Menu_Open_GSTR2A_Folder = New DevExpress.XtraBars.BarButtonItem()
         Me.rp_Home = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.rpg_CompareList = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpg_Compare = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -46,10 +77,6 @@ Partial Class frm_Main
         Me.gv_GSTR2A = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.Worker_Loader = New System.ComponentModel.BackgroundWorker()
         Me.Menu_CompareList = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.btn_Menu_Open_GSTR2_File = New DevExpress.XtraBars.BarButtonItem()
-        Me.btn_Menu_Open_GSTR2_Folder = New DevExpress.XtraBars.BarButtonItem()
-        Me.btn_Menu_Open_GSTR2A_File = New DevExpress.XtraBars.BarButtonItem()
-        Me.btn_Menu_Open_GSTR2A_Folder = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gc_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.gv_CompareList, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +116,12 @@ Partial Class frm_Main
         Me.btn_Add.Id = 1
         Me.btn_Add.ImageOptions.SvgImage = CType(resources.GetObject("btn_Add.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Add.Name = "btn_Add"
+        ToolTipTitleItem10.Text = "Add Compare Item"
+        ToolTipItem10.LeftIndent = 6
+        ToolTipItem10.Text = "Add GSTR2 & GSTR2A Files to Compare"
+        SuperToolTip10.Items.Add(ToolTipTitleItem10)
+        SuperToolTip10.Items.Add(ToolTipItem10)
+        Me.btn_Add.SuperTip = SuperToolTip10
         '
         'btn_Edit
         '
@@ -96,6 +129,12 @@ Partial Class frm_Main
         Me.btn_Edit.Id = 2
         Me.btn_Edit.ImageOptions.SvgImage = CType(resources.GetObject("btn_Edit.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Edit.Name = "btn_Edit"
+        ToolTipTitleItem11.Text = "Edit Compare Item"
+        ToolTipItem11.LeftIndent = 6
+        ToolTipItem11.Text = "Edit Selected Compare Item"
+        SuperToolTip11.Items.Add(ToolTipTitleItem11)
+        SuperToolTip11.Items.Add(ToolTipItem11)
+        Me.btn_Edit.SuperTip = SuperToolTip11
         '
         'btn_Remove
         '
@@ -103,6 +142,12 @@ Partial Class frm_Main
         Me.btn_Remove.Id = 3
         Me.btn_Remove.ImageOptions.SvgImage = CType(resources.GetObject("btn_Remove.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Remove.Name = "btn_Remove"
+        ToolTipTitleItem12.Text = "Remove Compare Item"
+        ToolTipItem12.LeftIndent = 6
+        ToolTipItem12.Text = "Remove Selected Compare Item"
+        SuperToolTip12.Items.Add(ToolTipTitleItem12)
+        SuperToolTip12.Items.Add(ToolTipItem12)
+        Me.btn_Remove.SuperTip = SuperToolTip12
         '
         'btn_Compare
         '
@@ -110,6 +155,12 @@ Partial Class frm_Main
         Me.btn_Compare.Id = 6
         Me.btn_Compare.ImageOptions.SvgImage = CType(resources.GetObject("btn_Compare.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Compare.Name = "btn_Compare"
+        ToolTipTitleItem13.Text = "Start Compare"
+        ToolTipItem13.LeftIndent = 6
+        ToolTipItem13.Text = resources.GetString("ToolTipItem13.Text")
+        SuperToolTip13.Items.Add(ToolTipTitleItem13)
+        SuperToolTip13.Items.Add(ToolTipItem13)
+        Me.btn_Compare.SuperTip = SuperToolTip13
         '
         'btn_UnwantedRowsRemover
         '
@@ -117,6 +168,64 @@ Partial Class frm_Main
         Me.btn_UnwantedRowsRemover.Id = 8
         Me.btn_UnwantedRowsRemover.ImageOptions.SvgImage = CType(resources.GetObject("btn_UnwantedRowsRemover.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_UnwantedRowsRemover.Name = "btn_UnwantedRowsRemover"
+        ToolTipTitleItem14.Text = "Remove Unwanted Rows"
+        ToolTipItem14.LeftIndent = 6
+        ToolTipItem14.Text = "Remove extra rows in-between entries in GSTR2A workbook downloaded from GST site"
+        SuperToolTip14.Items.Add(ToolTipTitleItem14)
+        SuperToolTip14.Items.Add(ToolTipItem14)
+        Me.btn_UnwantedRowsRemover.SuperTip = SuperToolTip14
+        '
+        'btn_Menu_Open_GSTR2_File
+        '
+        Me.btn_Menu_Open_GSTR2_File.Caption = "Open GSTR2 File"
+        Me.btn_Menu_Open_GSTR2_File.Id = 9
+        Me.btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2_File.Name = "btn_Menu_Open_GSTR2_File"
+        ToolTipTitleItem15.Text = "Open GSTR2 File"
+        ToolTipItem15.LeftIndent = 6
+        ToolTipItem15.Text = "Open selected GSTR2 Spreadsheet file"
+        SuperToolTip15.Items.Add(ToolTipTitleItem15)
+        SuperToolTip15.Items.Add(ToolTipItem15)
+        Me.btn_Menu_Open_GSTR2_File.SuperTip = SuperToolTip15
+        '
+        'btn_Menu_Open_GSTR2_Folder
+        '
+        Me.btn_Menu_Open_GSTR2_Folder.Caption = "Open Folder of GSTR2 File"
+        Me.btn_Menu_Open_GSTR2_Folder.Id = 10
+        Me.btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2_Folder.Name = "btn_Menu_Open_GSTR2_Folder"
+        ToolTipTitleItem16.Text = "Open Folder of GSTR2 File"
+        ToolTipItem16.LeftIndent = 6
+        ToolTipItem16.Text = "Open parent directory of give GSTR2 File in explorer"
+        SuperToolTip16.Items.Add(ToolTipTitleItem16)
+        SuperToolTip16.Items.Add(ToolTipItem16)
+        Me.btn_Menu_Open_GSTR2_Folder.SuperTip = SuperToolTip16
+        '
+        'btn_Menu_Open_GSTR2A_File
+        '
+        Me.btn_Menu_Open_GSTR2A_File.Caption = "Open GSTR2A File"
+        Me.btn_Menu_Open_GSTR2A_File.Id = 11
+        Me.btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2A_File.Name = "btn_Menu_Open_GSTR2A_File"
+        ToolTipTitleItem17.Text = "Open GSTR2A File"
+        ToolTipItem17.LeftIndent = 6
+        ToolTipItem17.Text = "Open selected GSTR2 Spreadsheet file"
+        SuperToolTip17.Items.Add(ToolTipTitleItem17)
+        SuperToolTip17.Items.Add(ToolTipItem17)
+        Me.btn_Menu_Open_GSTR2A_File.SuperTip = SuperToolTip17
+        '
+        'btn_Menu_Open_GSTR2A_Folder
+        '
+        Me.btn_Menu_Open_GSTR2A_Folder.Caption = "Open Folder of GSTR2A FIle"
+        Me.btn_Menu_Open_GSTR2A_Folder.Id = 12
+        Me.btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.btn_Menu_Open_GSTR2A_Folder.Name = "btn_Menu_Open_GSTR2A_Folder"
+        ToolTipTitleItem18.Text = "Open Folder of GSTR2A File"
+        ToolTipItem18.LeftIndent = 6
+        ToolTipItem18.Text = "Open parent directory of give GSTR2A File in explorer"
+        SuperToolTip18.Items.Add(ToolTipTitleItem18)
+        SuperToolTip18.Items.Add(ToolTipItem18)
+        Me.btn_Menu_Open_GSTR2A_Folder.SuperTip = SuperToolTip18
         '
         'rp_Home
         '
@@ -278,34 +387,6 @@ Partial Class frm_Main
         Me.Menu_CompareList.ItemLinks.Add(Me.btn_Menu_Open_GSTR2A_Folder)
         Me.Menu_CompareList.Name = "Menu_CompareList"
         Me.Menu_CompareList.Ribbon = Me.RibbonControl
-        '
-        'btn_Menu_Open_GSTR2_File
-        '
-        Me.btn_Menu_Open_GSTR2_File.Caption = "Open GSTR2 File"
-        Me.btn_Menu_Open_GSTR2_File.Id = 9
-        Me.btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Menu_Open_GSTR2_File.Name = "btn_Menu_Open_GSTR2_File"
-        '
-        'btn_Menu_Open_GSTR2_Folder
-        '
-        Me.btn_Menu_Open_GSTR2_Folder.Caption = "Open Folder of GSTR2 File"
-        Me.btn_Menu_Open_GSTR2_Folder.Id = 10
-        Me.btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Menu_Open_GSTR2_Folder.Name = "btn_Menu_Open_GSTR2_Folder"
-        '
-        'btn_Menu_Open_GSTR2A_File
-        '
-        Me.btn_Menu_Open_GSTR2A_File.Caption = "Open GSTR2A File"
-        Me.btn_Menu_Open_GSTR2A_File.Id = 11
-        Me.btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Menu_Open_GSTR2A_File.Name = "btn_Menu_Open_GSTR2A_File"
-        '
-        'btn_Menu_Open_GSTR2A_Folder
-        '
-        Me.btn_Menu_Open_GSTR2A_Folder.Caption = "Open Folder of GSTR2A FIle"
-        Me.btn_Menu_Open_GSTR2A_Folder.Id = 12
-        Me.btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
-        Me.btn_Menu_Open_GSTR2A_Folder.Name = "btn_Menu_Open_GSTR2A_Folder"
         '
         'frm_Main
         '
