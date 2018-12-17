@@ -77,6 +77,30 @@ Namespace My
                 Me("ExcelSaveFolder") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property LastGSTR2() As String
+            Get
+                Return CType(Me("LastGSTR2"),String)
+            End Get
+            Set
+                Me("LastGSTR2") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property LastGSTR2A() As String
+            Get
+                Return CType(Me("LastGSTR2A"),String)
+            End Get
+            Set
+                Me("LastGSTR2A") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
