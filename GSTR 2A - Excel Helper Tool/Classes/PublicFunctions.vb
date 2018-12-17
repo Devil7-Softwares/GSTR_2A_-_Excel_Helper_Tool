@@ -30,50 +30,56 @@ Public Class PublicFunctions
 
 #Region "GSTR Entries Reader"
     Public Shared Function ReadGSTR2_B2B(ByVal WorkBook As Workbook) As List(Of Objects.GSTR.Party)
-        ' Row & Column Indexes
-        Dim GSTR2_Start_Index As Integer = 3 ' Zero Based Index of Row from which entries are beginning
-        Dim GSTIN_Index As Integer = 1
-        Dim InvoiceNo_Index As Integer = 2
-        Dim InvoiceDate_Index As Integer = 3
-        Dim InvoiceVal_Index As Integer = 4
-        Dim Rate_Index As Integer = 5
-        Dim TaxableVal_Index As Integer = 7
-
-        Dim B2BSheet As Worksheet = WorkBook.Worksheets("b2b")
-
+        Dim R As New List(Of Objects.GSTR.Party)
         Try
-            Dim HeaderRow As Row = B2BSheet.Rows(2)
-            For i As Integer = 0 To 20
+            ' Row & Column Indexes
+            Dim GSTR2_Start_Index As Integer = 3 ' Zero Based Index of Row from which entries are beginning
+            Dim GSTIN_Index As Integer = 1
+            Dim InvoiceNo_Index As Integer = 2
+            Dim InvoiceDate_Index As Integer = 3
+            Dim InvoiceVal_Index As Integer = 4
+            Dim Rate_Index As Integer = 5
+            Dim TaxableVal_Index As Integer = 7
+
+            Dim B2BSheet As Worksheet = WorkBook.Worksheets("b2b")
+
+            Try
+                Dim HeaderRow As Row = B2BSheet.Rows(2)
+                For i As Integer = 0 To 20
+                    Try
+                        Dim Value As CellValue = HeaderRow.Item(i).Value
+                        If Value.IsText AndAlso Value.TextValue.ToUpper.Contains("TAXABLE") Then
+                            TaxableVal_Index = i
+                            Exit For
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+                Next
+            Catch ex As Exception
+
+            End Try
+
+            For Index As Integer = GSTR2_Start_Index To B2BSheet.Rows.LastUsedIndex
                 Try
-                    Dim Value As CellValue = HeaderRow.Item(i).Value
-                    If Value.IsText AndAlso Value.TextValue.ToUpper.Contains("TAXABLE") Then
-                        TaxableVal_Index = i
-                        Exit For
+                    Dim Row As Row = B2BSheet.Rows.Item(Index)
+                    Dim GSTIN As String = GetString(Row, GSTIN_Index)
+
+                    If GSTIN <> "" Then
+                        Dim InvoiceNumber As String = GetString(Row, InvoiceNo_Index)
+                        Dim InvoiceDate As Date = GetDate(Row, InvoiceDate_Index)
+                        Dim InvoiceValue As Double = GetString(Row, InvoiceVal_Index)
+                        Dim Rate As Double = GetString(Row, Rate_Index)
+                        Dim TaxableValue As Double = GetString(Row, TaxableVal_Index)
+                        AddInvoice(R, GSTIN, InvoiceNumber, InvoiceDate, InvoiceValue, Rate, TaxableValue, Row)
                     End If
                 Catch ex As Exception
 
                 End Try
             Next
         Catch ex As Exception
-
+            MsgBox("Unable to load GSTR2." & vbNewLine & ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
         End Try
-
-        Dim R As New List(Of Objects.GSTR.Party)
-
-        For Index As Integer = GSTR2_Start_Index To B2BSheet.Rows.LastUsedIndex
-            Dim Row As Row = B2BSheet.Rows.Item(Index)
-            Dim GSTIN As String = GetString(Row, GSTIN_Index)
-
-            If GSTIN <> "" Then
-                Dim InvoiceNumber As String = GetString(Row, InvoiceNo_Index)
-                Dim InvoiceDate As Date = GetDate(Row, InvoiceDate_Index)
-                Dim InvoiceValue As Double = GetString(Row, InvoiceVal_Index)
-                Dim Rate As Double = GetString(Row, Rate_Index)
-                Dim TaxableValue As Double = GetString(Row, TaxableVal_Index)
-                AddInvoice(R, GSTIN, InvoiceNumber, InvoiceDate, InvoiceValue, Rate, TaxableValue, Row)
-            End If
-        Next
-
         Return R
     End Function
 
@@ -94,33 +100,39 @@ Public Class PublicFunctions
     End Sub
 
     Public Shared Function ReadGSTR2A_B2B(ByVal WorkBook As Workbook) As List(Of Objects.GSTR.Party)
-        ' Row & Column Indexes
-        Dim GSTR2_Start_Index As Integer = 6 ' Zero Based Index of Row from which entries are beginning
-        Dim GSTIN_Index As Integer = 0
-        Dim InvoiceNo_Index As Integer = 2
-        Dim InvoiceDate_Index As Integer = 4
-        Dim InvoiceVal_Index As Integer = 5
-        Dim Rate_Index As Integer = 8
-        Dim TaxableVal_Index As Integer = 9
-
-        Dim B2BSheet As Worksheet = WorkBook.Worksheets("B2B")
-
         Dim R As New List(Of Objects.GSTR.Party)
+        Try
+            ' Row & Column Indexes
+            Dim GSTR2_Start_Index As Integer = 6 ' Zero Based Index of Row from which entries are beginning
+            Dim GSTIN_Index As Integer = 0
+            Dim InvoiceNo_Index As Integer = 2
+            Dim InvoiceDate_Index As Integer = 4
+            Dim InvoiceVal_Index As Integer = 5
+            Dim Rate_Index As Integer = 8
+            Dim TaxableVal_Index As Integer = 9
 
-        For Index As Integer = GSTR2_Start_Index To B2BSheet.Rows.LastUsedIndex
-            Dim Row As Row = B2BSheet.Rows.Item(Index)
-            Dim GSTIN As String = GetString(Row, GSTIN_Index)
+            Dim B2BSheet As Worksheet = WorkBook.Worksheets("B2B")
 
-            If GSTIN <> "" Then
-                Dim InvoiceNumber As String = GetString(Row, InvoiceNo_Index)
-                Dim InvoiceDate As Date = GetDate(Row, InvoiceDate_Index)
-                Dim InvoiceValue As Double = GetString(Row, InvoiceVal_Index)
-                Dim Rate As Double = GetString(Row, Rate_Index)
-                Dim TaxableValue As Double = GetString(Row, TaxableVal_Index)
-                AddInvoice(R, GSTIN, InvoiceNumber, InvoiceDate, InvoiceValue, Rate, TaxableValue, Row)
-            End If
-        Next
+            For Index As Integer = GSTR2_Start_Index To B2BSheet.Rows.LastUsedIndex
+                Dim Row As Row = B2BSheet.Rows.Item(Index)
+                Try
+                    Dim GSTIN As String = GetString(Row, GSTIN_Index)
 
+                    If GSTIN <> "" Then
+                        Dim InvoiceNumber As String = GetString(Row, InvoiceNo_Index)
+                        Dim InvoiceDate As Date = GetDate(Row, InvoiceDate_Index)
+                        Dim InvoiceValue As Double = GetString(Row, InvoiceVal_Index)
+                        Dim Rate As Double = GetString(Row, Rate_Index)
+                        Dim TaxableValue As Double = GetString(Row, TaxableVal_Index)
+                        AddInvoice(R, GSTIN, InvoiceNumber, InvoiceDate, InvoiceValue, Rate, TaxableValue, Row)
+                    End If
+                Catch ex As Exception
+
+                End Try
+            Next
+        Catch ex As Exception
+            MsgBox("Unable to load GSTR2." & vbNewLine & ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, "Error")
+        End Try
         Return R
     End Function
 #End Region
