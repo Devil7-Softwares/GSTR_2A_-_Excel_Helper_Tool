@@ -36,6 +36,21 @@ Namespace Dialogs
         End Sub
 #End Region
 
+#Region "Other Events"
+        Private Sub txt_GSTR_DragEnter(sender As Object, e As DragEventArgs) Handles txt_GSTR2.DragEnter, txt_GSTR2A.DragEnter
+            If e.Data.GetDataPresent(DataFormats.FileDrop) Then
+                e.Effect = DragDropEffects.Copy
+            End If
+        End Sub
+
+        Private Sub txt_GSTR_DragDrop(sender As Object, e As DragEventArgs) Handles txt_GSTR2.DragDrop, txt_GSTR2A.DragDrop
+            Dim Files As String() = e.Data.GetData(DataFormats.FileDrop)
+            If Files.Count > 0 Then
+                CType(sender, DevExpress.XtraEditors.ButtonEdit).Text = Files(0)
+            End If
+        End Sub
+#End Region
+
 #Region "Button Events"
         Private Sub btn_Done_Click(sender As Object, e As EventArgs) Handles btn_Done.Click
             If txt_GSTR2.Text.Trim = "" OrElse Not My.Computer.FileSystem.FileExists(txt_GSTR2.Text) Then

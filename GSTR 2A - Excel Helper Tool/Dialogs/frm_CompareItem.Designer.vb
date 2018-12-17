@@ -52,6 +52,7 @@
             '
             'txt_GSTR2
             '
+            Me.txt_GSTR2.AllowDrop = True
             Me.txt_GSTR2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.txt_GSTR2.Location = New System.Drawing.Point(95, 12)
@@ -63,6 +64,7 @@
             '
             'txt_GSTR2A
             '
+            Me.txt_GSTR2A.AllowDrop = True
             Me.txt_GSTR2A.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.txt_GSTR2A.Location = New System.Drawing.Point(95, 38)
@@ -80,7 +82,7 @@
             'btn_Done
             '
             Me.btn_Done.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.btn_Done.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+            Me.btn_Done.ImageOptions.SvgImage = CType(resources.GetObject("btn_Done.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
             Me.btn_Done.Location = New System.Drawing.Point(380, 64)
             Me.btn_Done.Name = "btn_Done"
             Me.btn_Done.Size = New System.Drawing.Size(75, 32)
