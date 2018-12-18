@@ -67,23 +67,23 @@ Namespace Dialogs
         End Sub
 
         Private Sub txt_GSTR2_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles txt_GSTR2.ButtonClick
-            If My.Settings.LastGSTR2 <> "" AndAlso My.Computer.FileSystem.FileExists(My.Settings.LastGSTR2) Then
-                browse_Excel.FileName = My.Settings.LastGSTR2
+            If My.Settings.LastGSTR2 <> "" AndAlso My.Computer.FileSystem.DirectoryExists(My.Settings.LastGSTR2) Then
+                browse_Excel.InitialDirectory = My.Settings.LastGSTR2
             End If
             If browse_Excel.ShowDialog = DialogResult.OK Then
                 txt_GSTR2.Text = browse_Excel.FileName
-                My.Settings.LastGSTR2 = browse_Excel.FileName
+                My.Settings.LastGSTR2 = My.Computer.FileSystem.GetFileInfo(browse_Excel.FileName).Directory.FullName
                 My.Settings.Save()
             End If
         End Sub
 
         Private Sub txt_GSTR2A_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles txt_GSTR2A.ButtonClick
-            If My.Settings.LastGSTR2A <> "" AndAlso My.Computer.FileSystem.FileExists(My.Settings.LastGSTR2A) Then
-                browse_Excel.FileName = My.Settings.LastGSTR2A
+            If My.Settings.LastGSTR2A <> "" AndAlso My.Computer.FileSystem.DirectoryExists(My.Settings.LastGSTR2A) Then
+                browse_Excel.InitialDirectory = My.Settings.LastGSTR2A
             End If
             If browse_Excel.ShowDialog = DialogResult.OK Then
                 txt_GSTR2A.Text = browse_Excel.FileName
-                My.Settings.LastGSTR2A = browse_Excel.FileName
+                My.Settings.LastGSTR2A = My.Computer.FileSystem.GetFileInfo(browse_Excel.FileName).Directory.FullName
                 My.Settings.Save()
             End If
         End Sub
