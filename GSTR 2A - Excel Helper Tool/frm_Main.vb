@@ -94,7 +94,7 @@ Public Class frm_Main
             If D.ShowDialog = DialogResult.OK Then
                 Item.GSTR2 = D.CompareItem.GSTR2
                 Item.GSTR2A = D.CompareItem.GSTR2A
-                LastUpdatedItemIndex = CompareList.IndexOf(D.CompareItem)
+                LastUpdatedItemIndex = CompareList.IndexOf(Item)
                 Worker_Loader.RunWorkerAsync()
             End If
         End If
