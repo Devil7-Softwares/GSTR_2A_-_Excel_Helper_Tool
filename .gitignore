@@ -260,3 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 /GSTR 2A - Excel Helper Tool/My Project/licenses.licx
+
+# Installer
+*Installer-cache*

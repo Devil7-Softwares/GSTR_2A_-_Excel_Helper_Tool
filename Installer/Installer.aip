@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="15.1" version="15.1" Modules="professional" RootPath="." Language="en" Id="{AC3F0C5B-B8DC-4EC1-A847-A5B6F734E50D}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_EXTERNALUIUNINSTALLERNAME" MultiBuildValue="DefaultBuild:aiui"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION"/>
+    <ROW Property="AI_PRODUCTNAME_ARP" Value="GSTR 2A - Excel Helper Tool"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.5.2" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.5.2" ValueLocId="-"/>
+    <ROW Property="AI_UNINSTALLER" Value="msiexec.exe"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPPRODUCTICON" Value="GSTR2AExcelHelperTool.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="Devil7 Softwares"/>
+    <ROW Property="ProductCode" Value="1033:{9445BC64-E90E-4B34-8055-022C6DAA8F1E} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="GSTR 2A - Excel Helper Tool"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{74CC7981-215B-4AAD-9B52-C1C38A341DFD}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows XP SP3 x86, Windows Server 2003 SP2 x86, Windows Vista x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="DefaultBuild:Windows XP SP2 x64, Windows Server 2003 SP2 x64, Windows Vista x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="DefaultBuild:Windows XP SP2 x64, Windows Server 2003 SP2 x64, Windows Vista x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows XP SP3 x86, Windows Server 2003 SP2 x86, Windows Vista x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AI_CustomARPName" ComponentId="{A4E5EEA1-5E2A-4157-96E7-F70E7D0639B3}" Directory_="APPDIR" Attributes="4" KeyPath="DisplayName" Options="1"/>
+    <ROW Component="AI_DisableModify" ComponentId="{8D9EBCF8-023A-4FC0-8228-72AEB9A06F0E}" Directory_="APPDIR" Attributes="4" KeyPath="NoModify" Options="1"/>
+    <ROW Component="AI_ExePath" ComponentId="{4CF1F1C2-42F6-4394-91F2-F4D8129AE729}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="DevExpress.BonusSkins.v18.2.dll" ComponentId="{4CE7A200-E4A6-4F2E-8477-0FAC07BA2615}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.BonusSkins.v18.2.dll"/>
+    <ROW Component="DevExpress.Charts.v18.2.Core.dll" ComponentId="{9AD168D1-41EF-46A8-814A-58BAE98CD803}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Charts.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.CodeParser.v18.2.dll" ComponentId="{36BD5B14-9B90-4D92-8218-7C380B7E9744}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.CodeParser.v18.2.dll"/>
+    <ROW Component="DevExpress.Data.v18.2.dll" ComponentId="{82BF3041-466D-4C99-BCA0-B2A0512D02C8}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v18.2.dll"/>
+    <ROW Component="DevExpress.DataAccess.v18.2.dll" ComponentId="{0DBCD927-600D-46AD-8690-2E1B00935FB9}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.DataAccess.v18.2.dll"/>
+    <ROW Component="DevExpress.Docs.v18.2.dll" ComponentId="{51FC0EA3-3E51-4ADE-9663-A0B5433A623C}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Docs.v18.2.dll"/>
+    <ROW Component="DevExpress.Images.v18.2.dll" ComponentId="{B4C0351E-E9DB-4F54-ACE1-8FAD75462793}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Images.v18.2.dll"/>
+    <ROW Component="DevExpress.Office.v18.2.Core.dll" ComponentId="{D1B9A72B-CA12-4980-A343-E96B463B5305}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Office.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v18.2.Core.dll" ComponentId="{087AD290-5FEA-4C49-B079-1136B1BF4617}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v18.2.Drawing.dll" ComponentId="{9AFFB4DD-405F-4C3E-8ADC-D256F75EBBF5}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v18.2.Drawing.dll"/>
+    <ROW Component="DevExpress.Printing.v18.2.Core.dll" ComponentId="{C0911BC2-8443-4C5D-93ED-AA561AE41B3A}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v18.2.Core.dll" ComponentId="{ECCBBC03-0722-4BBE-A95D-369E84B7EF14}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v18.2.Export.dll" ComponentId="{933D793E-8B90-48C9-A186-DEA0661DBF23}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v18.2.Export.dll"/>
+    <ROW Component="DevExpress.Snap.v18.2.Core.dll" ComponentId="{A645E0C4-F085-4590-8C07-2F1D5B95DCEC}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Snap.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.Sparkline.v18.2.Core.dll" ComponentId="{B46111F4-86FC-476D-8435-4FC5E1723D5E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Sparkline.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.2.Core.dll" ComponentId="{512047C2-84C5-4612-A70A-A81DB8E53020}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.2.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v18.2.dll" ComponentId="{A9D3CA2F-56CC-4DF1-89B4-9AF77E499D5E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v18.2.dll"/>
+    <ROW Component="DevExpress.Xpo.v18.2.dll" ComponentId="{5B281DF0-7535-4118-9971-8323CAB7B634}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpo.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraBars.v18.2.dll" ComponentId="{BACFC943-6C9A-4CC7-BBF5-C0DD8ADE739F}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraBars.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.2.dll" ComponentId="{85DA5279-DA58-4DC8-91D2-37CC62224031}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v18.2.dll" ComponentId="{12BFE106-33B6-4BF0-AE36-2FC7BCA6817F}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v18.2.dll" ComponentId="{E19ECBF1-3E69-4ACF-855E-E13EDAE1EB33}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v18.2.dll" ComponentId="{52CBBD5E-062D-4203-8BC0-B01098462BA4}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.2.dll" ComponentId="{A93DC6FF-5F72-4A44-8BBE-49A0CB010EE1}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.2.dll" ComponentId="{3CEECFAC-A13F-44A3-9422-08F5731A3FEC}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.2.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.2.dll" ComponentId="{022BE06D-8D35-4057-B038-16FA69D8B5FA}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.2.dll"/>
+    <ROW Component="GSTR2AExcelHelperTool.exe" ComponentId="{1A32AD87-4833-457D-8391-C9F9538C2648}" Directory_="APPDIR" Attributes="0" KeyPath="GSTR2AExcelHelperTool.exe"/>
+    <ROW Component="ProductInformation" ComponentId="{BF54A319-C7D1-4FDC-8924-231FABDAF8E4}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{05D47DF0-B7E3-4CCD-BED2-AF00A9E915E8}" Directory_="SHORTCUTDIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_CustomARPName AI_DisableModify AI_ExePath DevExpress.BonusSkins.v18.2.dll DevExpress.Charts.v18.2.Core.dll DevExpress.CodeParser.v18.2.dll DevExpress.Data.v18.2.dll DevExpress.DataAccess.v18.2.dll DevExpress.Docs.v18.2.dll DevExpress.Images.v18.2.dll DevExpress.Office.v18.2.Core.dll DevExpress.Pdf.v18.2.Core.dll DevExpress.Pdf.v18.2.Drawing.dll DevExpress.Printing.v18.2.Core.dll DevExpress.RichEdit.v18.2.Core.dll DevExpress.RichEdit.v18.2.Export.dll DevExpress.Snap.v18.2.Core.dll DevExpress.Sparkline.v18.2.Core.dll DevExpress.Spreadsheet.v18.2.Core.dll DevExpress.Utils.v18.2.dll DevExpress.Xpo.v18.2.dll DevExpress.XtraBars.v18.2.dll DevExpress.XtraCharts.v18.2.dll DevExpress.XtraEditors.v18.2.dll DevExpress.XtraGrid.v18.2.dll DevExpress.XtraLayout.v18.2.dll DevExpress.XtraPrinting.v18.2.dll DevExpress.XtraRichEdit.v18.2.dll DevExpress.XtraTreeList.v18.2.dll GSTR2AExcelHelperTool.exe ProductInformation SHORTCUTDIR"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="DevExpress.BonusSkins.v18.2.dll" Component_="DevExpress.BonusSkins.v18.2.dll" FileName="DEVEXP~1.DLL|DevExpress.BonusSkins.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.BonusSkins.v18.2.dll" SelfReg="false" NextFile="DevExpress.Charts.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Charts.v18.2.Core.dll" Component_="DevExpress.Charts.v18.2.Core.dll" FileName="DEVEXP~2.DLL|DevExpress.Charts.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Charts.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.CodeParser.v18.2.dll"/>
+    <ROW File="DevExpress.CodeParser.v18.2.dll" Component_="DevExpress.CodeParser.v18.2.dll" FileName="DEVEXP~3.DLL|DevExpress.CodeParser.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.CodeParser.v18.2.dll" SelfReg="false" NextFile="DevExpress.Data.v18.2.dll"/>
+    <ROW File="DevExpress.Data.v18.2.dll" Component_="DevExpress.Data.v18.2.dll" FileName="DEVEXP~4.DLL|DevExpress.Data.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Data.v18.2.dll" SelfReg="false" NextFile="DevExpress.DataAccess.v18.2.dll"/>
+    <ROW File="DevExpress.DataAccess.v18.2.dll" Component_="DevExpress.DataAccess.v18.2.dll" FileName="DEVEXP~5.DLL|DevExpress.DataAccess.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.DataAccess.v18.2.dll" SelfReg="false" NextFile="DevExpress.Docs.v18.2.dll"/>
+    <ROW File="DevExpress.Docs.v18.2.dll" Component_="DevExpress.Docs.v18.2.dll" FileName="DEVEXP~6.DLL|DevExpress.Docs.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Docs.v18.2.dll" SelfReg="false" NextFile="DevExpress.Images.v18.2.dll"/>
+    <ROW File="DevExpress.Images.v18.2.dll" Component_="DevExpress.Images.v18.2.dll" FileName="DEVEXP~7.DLL|DevExpress.Images.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Images.v18.2.dll" SelfReg="false" NextFile="DevExpress.Office.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Office.v18.2.Core.dll" Component_="DevExpress.Office.v18.2.Core.dll" FileName="DEVEXP~8.DLL|DevExpress.Office.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Office.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.Pdf.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Pdf.v18.2.Core.dll" Component_="DevExpress.Pdf.v18.2.Core.dll" FileName="DEVEXP~9.DLL|DevExpress.Pdf.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Pdf.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.Pdf.v18.2.Drawing.dll"/>
+    <ROW File="DevExpress.Pdf.v18.2.Drawing.dll" Component_="DevExpress.Pdf.v18.2.Drawing.dll" FileName="DEVEX~10.DLL|DevExpress.Pdf.v18.2.Drawing.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Pdf.v18.2.Drawing.dll" SelfReg="false" NextFile="DevExpress.Printing.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Printing.v18.2.Core.dll" Component_="DevExpress.Printing.v18.2.Core.dll" FileName="DEVEX~11.DLL|DevExpress.Printing.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Printing.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.RichEdit.v18.2.Core.dll"/>
+    <ROW File="DevExpress.RichEdit.v18.2.Core.dll" Component_="DevExpress.RichEdit.v18.2.Core.dll" FileName="DEVEX~12.DLL|DevExpress.RichEdit.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.RichEdit.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.RichEdit.v18.2.Export.dll"/>
+    <ROW File="DevExpress.RichEdit.v18.2.Export.dll" Component_="DevExpress.RichEdit.v18.2.Export.dll" FileName="DEVEX~13.DLL|DevExpress.RichEdit.v18.2.Export.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.RichEdit.v18.2.Export.dll" SelfReg="false" NextFile="DevExpress.Snap.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Snap.v18.2.Core.dll" Component_="DevExpress.Snap.v18.2.Core.dll" FileName="DEVEX~14.DLL|DevExpress.Snap.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Snap.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.Sparkline.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Sparkline.v18.2.Core.dll" Component_="DevExpress.Sparkline.v18.2.Core.dll" FileName="DEVEX~15.DLL|DevExpress.Sparkline.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Sparkline.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.Spreadsheet.v18.2.Core.dll"/>
+    <ROW File="DevExpress.Spreadsheet.v18.2.Core.dll" Component_="DevExpress.Spreadsheet.v18.2.Core.dll" FileName="DEVEX~16.DLL|DevExpress.Spreadsheet.v18.2.Core.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Spreadsheet.v18.2.Core.dll" SelfReg="false" NextFile="DevExpress.Utils.v18.2.dll"/>
+    <ROW File="DevExpress.Utils.v18.2.dll" Component_="DevExpress.Utils.v18.2.dll" FileName="DEVEX~17.DLL|DevExpress.Utils.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Utils.v18.2.dll" SelfReg="false" NextFile="DevExpress.Xpo.v18.2.dll"/>
+    <ROW File="DevExpress.Xpo.v18.2.dll" Component_="DevExpress.Xpo.v18.2.dll" FileName="DEVEX~18.DLL|DevExpress.Xpo.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.Xpo.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraBars.v18.2.dll"/>
+    <ROW File="DevExpress.XtraBars.v18.2.dll" Component_="DevExpress.XtraBars.v18.2.dll" FileName="DEVEX~19.DLL|DevExpress.XtraBars.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraBars.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraCharts.v18.2.dll"/>
+    <ROW File="DevExpress.XtraCharts.v18.2.dll" Component_="DevExpress.XtraCharts.v18.2.dll" FileName="DEVEX~20.DLL|DevExpress.XtraCharts.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraCharts.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraEditors.v18.2.dll"/>
+    <ROW File="DevExpress.XtraEditors.v18.2.dll" Component_="DevExpress.XtraEditors.v18.2.dll" FileName="DEVEX~21.DLL|DevExpress.XtraEditors.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraEditors.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraGrid.v18.2.dll"/>
+    <ROW File="DevExpress.XtraGrid.v18.2.dll" Component_="DevExpress.XtraGrid.v18.2.dll" FileName="DEVEX~22.DLL|DevExpress.XtraGrid.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraGrid.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraLayout.v18.2.dll"/>
+    <ROW File="DevExpress.XtraLayout.v18.2.dll" Component_="DevExpress.XtraLayout.v18.2.dll" FileName="DEVEX~23.DLL|DevExpress.XtraLayout.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraLayout.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraPrinting.v18.2.dll"/>
+    <ROW File="DevExpress.XtraPrinting.v18.2.dll" Component_="DevExpress.XtraPrinting.v18.2.dll" FileName="DEVEX~24.DLL|DevExpress.XtraPrinting.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraPrinting.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraRichEdit.v18.2.dll"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.2.dll" Component_="DevExpress.XtraRichEdit.v18.2.dll" FileName="DEVEX~25.DLL|DevExpress.XtraRichEdit.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraRichEdit.v18.2.dll" SelfReg="false" NextFile="DevExpress.XtraTreeList.v18.2.dll"/>
+    <ROW File="DevExpress.XtraTreeList.v18.2.dll" Component_="DevExpress.XtraTreeList.v18.2.dll" FileName="DEVEX~26.DLL|DevExpress.XtraTreeList.v18.2.dll" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\DevExpress.XtraTreeList.v18.2.dll" SelfReg="false" NextFile="GSTR2AExcelHelperTool.exe"/>
+    <ROW File="GSTR2AExcelHelperTool.exe" Component_="GSTR2AExcelHelperTool.exe" FileName="GSTR2A~1.EXE|GSTR 2A - Excel Helper Tool.exe" Attributes="0" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\GSTR 2A - Excel Helper Tool.exe" SelfReg="false" DigSign="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" GeneralOptions="b" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="bin" PackageFileName="GSTR_2A-Excel_Helper_Tool-Installer" Languages="en" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\GSTR 2A - Excel Helper Tool.exe" ExtUI="true" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="PreparePrereqDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\PreparePrereqDlg.aip"/>
+    <ROW Fragment="PrerequisitesDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\PrerequisitesDlg.aip"/>
+    <ROW Fragment="ProgressPrereqDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\ProgressPrereqDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;azure\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;azure\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\WelcomeDlg.aip"/>
+    <ROW Fragment="WelcomePrereqDlg.aip" Path="&lt;AI_THEMES&gt;azure\fragments\WelcomePrereqDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="ExternalUICleaner.dll" SourcePath="&lt;AI_CUSTACTS&gt;ExternalUICleaner.dll"/>
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomePrereqDlg" Control_="Next" Event="NewDialog" Argument="PrerequisitesDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Back" Event="NewDialog" Argument="WelcomePrereqDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DoRemoveExternalUIStub" Type="3585" Source="ExternalUICleaner.dll" Target="DoRemoveExternalUIStub" WithoutSeq="true"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_GetArpIconPath" Type="1" Source="aicustact.dll" Target="GetArpIconPath"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#GSTR2AExcelHelperTool.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_RemoveExternalUIStub" Type="1" Source="ExternalUICleaner.dll" Target="RemoveExternalUIStub"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_RunFinishActions" Type="1" Source="aicustact.dll" Target="RunFinishActions" WithoutSeq="true"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="GSTR2AExcelHelperTool.exe" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool\GSTR 2A - Excel Helper Tool.exe" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1502"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="103" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_GetArpIconPath" Sequence="1401"/>
+    <ROW Action="AI_RemoveExternalUIStub" Condition="(REMOVE=&quot;ALL&quot;) AND ((VersionNT &gt; 500) OR((VersionNT = 500) AND (ServicePackLevel &gt;= 4)))" Sequence="1501"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="103"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR ( NOT VersionNT64 ) OR ( VersionNT64 AND ((VersionNT64 &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2) OR (MsiNTProductType = 1)) AND ((VersionNT64 &lt;&gt; 600) OR (MsiNTProductType &lt;&gt; 1)) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT64Display]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 501) OR (ServicePackLevel &lt;&gt; 3)) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel &lt;&gt; 2)) AND ((VersionNT &lt;&gt; 600) OR (MsiNTProductType &lt;&gt; 1)) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="Comments" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Comments" Value="[ARPCOMMENTS]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Contact" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Contact" Value="[ARPCONTACT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayIcon" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayIcon" Value="[ARP_ICON_PATH]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayName" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayName" Value="[AI_PRODUCTNAME_ARP]" Component_="AI_CustomARPName"/>
+    <ROW Registry="DisplayVersion" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="DisplayVersion" Value="[ProductVersion]" Component_="AI_CustomARPName"/>
+    <ROW Registry="EstimatedSize" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="EstimatedSize" Value="#[AI_ARP_SIZE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpLink" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpLink" Value="[ARPHELPLINK]" Component_="AI_CustomARPName"/>
+    <ROW Registry="HelpTelephone" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="HelpTelephone" Value="[ARPHELPTELEPHONE]" Component_="AI_CustomARPName"/>
+    <ROW Registry="InstallLocation" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="InstallLocation" Value="[APPDIR]" Component_="AI_CustomARPName"/>
+    <ROW Registry="ModifyPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="ModifyPath" Value="[AI_UNINSTALLER] /i [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
+    <ROW Registry="NoModify" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoModify" Value="#1" Component_="AI_DisableModify"/>
+    <ROW Registry="NoRepair" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="NoRepair" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Publisher" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Publisher" Value="[Manufacturer]" Component_="AI_CustomARPName"/>
+    <ROW Registry="Readme" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="Readme" Value="[ARPREADME]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLInfoAbout" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLInfoAbout" Value="[ARPURLINFOABOUT]" Component_="AI_CustomARPName"/>
+    <ROW Registry="URLUpdateInfo" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="URLUpdateInfo" Value="[ARPURLUPDATEINFO]" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallPath" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallPath" Value="[AI_UNINSTALLER] /x [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
+    <ROW Registry="UninstallString" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="UninstallString" Value="[AI_UNINSTALLER] /x [ProductCode] AI_UNINSTALLER_CTP=1" Component_="AI_CustomARPName"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+    <ROW Registry="VersionMajor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMajor" Value="#1" Component_="AI_CustomARPName"/>
+    <ROW Registry="VersionMinor" Root="-1" Key="Software\Microsoft\Windows\CurrentVersion\Uninstall\[ProductName] [ProductVersion]" Name="VersionMinor" Value="#0" Component_="AI_CustomARPName"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="GSTR2AExcelHelperTool" Directory_="SHORTCUTDIR" Name="GSTR2A~1|GSTR 2A - Excel Helper Tool" Component_="GSTR2AExcelHelperTool.exe" Target="[#GSTR2AExcelHelperTool.exe]" Description="GSTR 2A - Excel Helper Tool" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="GSTR2AExcelHelperTool_1" Directory_="DesktopFolder" Name="GSTR2A~1|GSTR 2A - Excel Helper Tool" Component_="GSTR2AExcelHelperTool.exe" Target="[#GSTR2AExcelHelperTool.exe]" Description="GSTR 2A - Excel Helper Tool" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="azure"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="BE1A492345959ED6A4D5ACBD0EC0" DisplayName=".NET Framework 4.5.2" SetupFileUrl="http://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe" Location="1" ExactSize="69999448" WinNTVersions="Windows XP SP3 x86, Windows Server 2003 SP2 x86, Windows 10 x86" WinNT64Versions="Windows XP SP2 x64, Windows Server 2003 SP2 x64, Windows 10 x64, Windows Server 2016 x64" Operator="1" ComLine="/qb" BasicUiComLine="/qb" NoUiComLine="/qb" Options="xy" MD5="ee01fc4110c73a8e5efc7cabda0f5ff7" TargetName=".NET Framework 4.5.2"/>
+    <ATTRIBUTE name="PrereqsOrder" value="BE1A492345959ED6A4D5ACBD0EC0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="BE1A492345959ED6A4D5ACBD0EC0Release" Prereq="BE1A492345959ED6A4D5ACBD0EC0" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Release" RefContent="G379892" Order="1" Property="PreReqSearch_BE1A492345959ED6A4D5AC"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.SynchronizedFolderComponent">
+    <ROW Directory_="APPDIR" SourcePath="..\..\..\Desktop\Deployment\GSTR 2A - Excel Helper Tool" Feature="MainFeature" ExcludePattern="*~|#*#|%*%|._|CVS|.cvsignore|SCCS|vssver.scc|mssccprj.scc|vssver2.scc|.svn|.DS_Store" ExcludeFlags="6"/>
+  </COMPONENT>
+</DOCUMENT>
