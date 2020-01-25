@@ -1,7 +1,9 @@
-﻿Namespace Dialogs
+﻿Imports DevExpress.XtraEditors
+
+Namespace Dialogs
     <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
     Partial Class frm_CompareItem
-        Inherits XtraFormTemp
+        Inherits XtraForm
 
         'Form overrides dispose to clean up the component list.
         <System.Diagnostics.DebuggerNonUserCode()>

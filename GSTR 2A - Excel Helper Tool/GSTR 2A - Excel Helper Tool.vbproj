@@ -89,9 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\PublicFunctions.vb" />
-    <Compile Include="Classes\XtraFormTemp.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Dialogs\frm_CompareItem.Designer.vb">
       <DependentUpon>frm_CompareItem.vb</DependentUpon>
     </Compile>

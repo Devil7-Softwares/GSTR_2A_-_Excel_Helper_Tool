@@ -21,33 +21,33 @@ Partial Class frm_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_Main))
-        Dim SuperToolTip10 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem10 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem10 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip11 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem11 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem11 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip12 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem12 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem12 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip13 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem13 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem13 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip14 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem14 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem14 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip15 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem15 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem15 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip16 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem16 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem16 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip17 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem17 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem17 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
-        Dim SuperToolTip18 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
-        Dim ToolTipTitleItem18 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
-        Dim ToolTipItem18 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip1 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem1 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem1 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip2 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem2 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem2 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip3 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem3 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem3 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip4 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem4 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem4 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip5 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem5 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem5 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip6 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem6 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem6 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip7 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem7 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem7 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip8 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem8 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem8 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
+        Dim SuperToolTip9 As DevExpress.Utils.SuperToolTip = New DevExpress.Utils.SuperToolTip()
+        Dim ToolTipTitleItem9 As DevExpress.Utils.ToolTipTitleItem = New DevExpress.Utils.ToolTipTitleItem()
+        Dim ToolTipItem9 As DevExpress.Utils.ToolTipItem = New DevExpress.Utils.ToolTipItem()
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.btn_Add = New DevExpress.XtraBars.BarButtonItem()
         Me.btn_Edit = New DevExpress.XtraBars.BarButtonItem()
@@ -95,7 +95,7 @@ Partial Class frm_Main
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_Compare, Me.btn_UnwantedRowsRemover, Me.btn_Menu_Open_GSTR2_File, Me.btn_Menu_Open_GSTR2_Folder, Me.btn_Menu_Open_GSTR2A_File, Me.btn_Menu_Open_GSTR2A_Folder})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.btn_Add, Me.btn_Edit, Me.btn_Remove, Me.btn_Compare, Me.btn_UnwantedRowsRemover, Me.btn_Menu_Open_GSTR2_File, Me.btn_Menu_Open_GSTR2_Folder, Me.btn_Menu_Open_GSTR2A_File, Me.btn_Menu_Open_GSTR2A_Folder, Me.RibbonControl.SearchEditItem})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
         Me.RibbonControl.MaxItemId = 13
         Me.RibbonControl.Name = "RibbonControl"
@@ -106,7 +106,7 @@ Partial Class frm_Main
         Me.RibbonControl.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl.ShowPageHeadersInFormCaption = DevExpress.Utils.DefaultBoolean.[False]
         Me.RibbonControl.ShowToolbarCustomizeItem = False
-        Me.RibbonControl.Size = New System.Drawing.Size(699, 143)
+        Me.RibbonControl.Size = New System.Drawing.Size(699, 158)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
         Me.RibbonControl.Toolbar.ShowCustomizeItem = False
         '
@@ -116,12 +116,12 @@ Partial Class frm_Main
         Me.btn_Add.Id = 1
         Me.btn_Add.ImageOptions.SvgImage = CType(resources.GetObject("btn_Add.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Add.Name = "btn_Add"
-        ToolTipTitleItem10.Text = "Add Compare Item"
-        ToolTipItem10.LeftIndent = 6
-        ToolTipItem10.Text = "Add GSTR2 & GSTR2A Files to Compare"
-        SuperToolTip10.Items.Add(ToolTipTitleItem10)
-        SuperToolTip10.Items.Add(ToolTipItem10)
-        Me.btn_Add.SuperTip = SuperToolTip10
+        ToolTipTitleItem1.Text = "Add Compare Item"
+        ToolTipItem1.LeftIndent = 6
+        ToolTipItem1.Text = "Add GSTR2 & GSTR2A Files to Compare"
+        SuperToolTip1.Items.Add(ToolTipTitleItem1)
+        SuperToolTip1.Items.Add(ToolTipItem1)
+        Me.btn_Add.SuperTip = SuperToolTip1
         '
         'btn_Edit
         '
@@ -129,12 +129,12 @@ Partial Class frm_Main
         Me.btn_Edit.Id = 2
         Me.btn_Edit.ImageOptions.SvgImage = CType(resources.GetObject("btn_Edit.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Edit.Name = "btn_Edit"
-        ToolTipTitleItem11.Text = "Edit Compare Item"
-        ToolTipItem11.LeftIndent = 6
-        ToolTipItem11.Text = "Edit Selected Compare Item"
-        SuperToolTip11.Items.Add(ToolTipTitleItem11)
-        SuperToolTip11.Items.Add(ToolTipItem11)
-        Me.btn_Edit.SuperTip = SuperToolTip11
+        ToolTipTitleItem2.Text = "Edit Compare Item"
+        ToolTipItem2.LeftIndent = 6
+        ToolTipItem2.Text = "Edit Selected Compare Item"
+        SuperToolTip2.Items.Add(ToolTipTitleItem2)
+        SuperToolTip2.Items.Add(ToolTipItem2)
+        Me.btn_Edit.SuperTip = SuperToolTip2
         '
         'btn_Remove
         '
@@ -142,12 +142,12 @@ Partial Class frm_Main
         Me.btn_Remove.Id = 3
         Me.btn_Remove.ImageOptions.SvgImage = CType(resources.GetObject("btn_Remove.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Remove.Name = "btn_Remove"
-        ToolTipTitleItem12.Text = "Remove Compare Item"
-        ToolTipItem12.LeftIndent = 6
-        ToolTipItem12.Text = "Remove Selected Compare Item"
-        SuperToolTip12.Items.Add(ToolTipTitleItem12)
-        SuperToolTip12.Items.Add(ToolTipItem12)
-        Me.btn_Remove.SuperTip = SuperToolTip12
+        ToolTipTitleItem3.Text = "Remove Compare Item"
+        ToolTipItem3.LeftIndent = 6
+        ToolTipItem3.Text = "Remove Selected Compare Item"
+        SuperToolTip3.Items.Add(ToolTipTitleItem3)
+        SuperToolTip3.Items.Add(ToolTipItem3)
+        Me.btn_Remove.SuperTip = SuperToolTip3
         '
         'btn_Compare
         '
@@ -155,12 +155,12 @@ Partial Class frm_Main
         Me.btn_Compare.Id = 6
         Me.btn_Compare.ImageOptions.SvgImage = CType(resources.GetObject("btn_Compare.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Compare.Name = "btn_Compare"
-        ToolTipTitleItem13.Text = "Start Compare"
-        ToolTipItem13.LeftIndent = 6
-        ToolTipItem13.Text = resources.GetString("ToolTipItem13.Text")
-        SuperToolTip13.Items.Add(ToolTipTitleItem13)
-        SuperToolTip13.Items.Add(ToolTipItem13)
-        Me.btn_Compare.SuperTip = SuperToolTip13
+        ToolTipTitleItem4.Text = "Start Compare"
+        ToolTipItem4.LeftIndent = 6
+        ToolTipItem4.Text = resources.GetString("ToolTipItem4.Text")
+        SuperToolTip4.Items.Add(ToolTipTitleItem4)
+        SuperToolTip4.Items.Add(ToolTipItem4)
+        Me.btn_Compare.SuperTip = SuperToolTip4
         '
         'btn_UnwantedRowsRemover
         '
@@ -168,12 +168,12 @@ Partial Class frm_Main
         Me.btn_UnwantedRowsRemover.Id = 8
         Me.btn_UnwantedRowsRemover.ImageOptions.SvgImage = CType(resources.GetObject("btn_UnwantedRowsRemover.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_UnwantedRowsRemover.Name = "btn_UnwantedRowsRemover"
-        ToolTipTitleItem14.Text = "Remove Unwanted Rows"
-        ToolTipItem14.LeftIndent = 6
-        ToolTipItem14.Text = "Remove extra rows in-between entries in GSTR2A workbook downloaded from GST site"
-        SuperToolTip14.Items.Add(ToolTipTitleItem14)
-        SuperToolTip14.Items.Add(ToolTipItem14)
-        Me.btn_UnwantedRowsRemover.SuperTip = SuperToolTip14
+        ToolTipTitleItem5.Text = "Remove Unwanted Rows"
+        ToolTipItem5.LeftIndent = 6
+        ToolTipItem5.Text = "Remove extra rows in-between entries in GSTR2A workbook downloaded from GST site"
+        SuperToolTip5.Items.Add(ToolTipTitleItem5)
+        SuperToolTip5.Items.Add(ToolTipItem5)
+        Me.btn_UnwantedRowsRemover.SuperTip = SuperToolTip5
         '
         'btn_Menu_Open_GSTR2_File
         '
@@ -181,12 +181,12 @@ Partial Class frm_Main
         Me.btn_Menu_Open_GSTR2_File.Id = 9
         Me.btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Menu_Open_GSTR2_File.Name = "btn_Menu_Open_GSTR2_File"
-        ToolTipTitleItem15.Text = "Open GSTR2 File"
-        ToolTipItem15.LeftIndent = 6
-        ToolTipItem15.Text = "Open selected GSTR2 Spreadsheet file"
-        SuperToolTip15.Items.Add(ToolTipTitleItem15)
-        SuperToolTip15.Items.Add(ToolTipItem15)
-        Me.btn_Menu_Open_GSTR2_File.SuperTip = SuperToolTip15
+        ToolTipTitleItem6.Text = "Open GSTR2 File"
+        ToolTipItem6.LeftIndent = 6
+        ToolTipItem6.Text = "Open selected GSTR2 Spreadsheet file"
+        SuperToolTip6.Items.Add(ToolTipTitleItem6)
+        SuperToolTip6.Items.Add(ToolTipItem6)
+        Me.btn_Menu_Open_GSTR2_File.SuperTip = SuperToolTip6
         '
         'btn_Menu_Open_GSTR2_Folder
         '
@@ -194,12 +194,12 @@ Partial Class frm_Main
         Me.btn_Menu_Open_GSTR2_Folder.Id = 10
         Me.btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Menu_Open_GSTR2_Folder.Name = "btn_Menu_Open_GSTR2_Folder"
-        ToolTipTitleItem16.Text = "Open Folder of GSTR2 File"
-        ToolTipItem16.LeftIndent = 6
-        ToolTipItem16.Text = "Open parent directory of give GSTR2 File in explorer"
-        SuperToolTip16.Items.Add(ToolTipTitleItem16)
-        SuperToolTip16.Items.Add(ToolTipItem16)
-        Me.btn_Menu_Open_GSTR2_Folder.SuperTip = SuperToolTip16
+        ToolTipTitleItem7.Text = "Open Folder of GSTR2 File"
+        ToolTipItem7.LeftIndent = 6
+        ToolTipItem7.Text = "Open parent directory of give GSTR2 File in explorer"
+        SuperToolTip7.Items.Add(ToolTipTitleItem7)
+        SuperToolTip7.Items.Add(ToolTipItem7)
+        Me.btn_Menu_Open_GSTR2_Folder.SuperTip = SuperToolTip7
         '
         'btn_Menu_Open_GSTR2A_File
         '
@@ -207,12 +207,12 @@ Partial Class frm_Main
         Me.btn_Menu_Open_GSTR2A_File.Id = 11
         Me.btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_File.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Menu_Open_GSTR2A_File.Name = "btn_Menu_Open_GSTR2A_File"
-        ToolTipTitleItem17.Text = "Open GSTR2A File"
-        ToolTipItem17.LeftIndent = 6
-        ToolTipItem17.Text = "Open selected GSTR2 Spreadsheet file"
-        SuperToolTip17.Items.Add(ToolTipTitleItem17)
-        SuperToolTip17.Items.Add(ToolTipItem17)
-        Me.btn_Menu_Open_GSTR2A_File.SuperTip = SuperToolTip17
+        ToolTipTitleItem8.Text = "Open GSTR2A File"
+        ToolTipItem8.LeftIndent = 6
+        ToolTipItem8.Text = "Open selected GSTR2 Spreadsheet file"
+        SuperToolTip8.Items.Add(ToolTipTitleItem8)
+        SuperToolTip8.Items.Add(ToolTipItem8)
+        Me.btn_Menu_Open_GSTR2A_File.SuperTip = SuperToolTip8
         '
         'btn_Menu_Open_GSTR2A_Folder
         '
@@ -220,12 +220,12 @@ Partial Class frm_Main
         Me.btn_Menu_Open_GSTR2A_Folder.Id = 12
         Me.btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage = CType(resources.GetObject("btn_Menu_Open_GSTR2A_Folder.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
         Me.btn_Menu_Open_GSTR2A_Folder.Name = "btn_Menu_Open_GSTR2A_Folder"
-        ToolTipTitleItem18.Text = "Open Folder of GSTR2A File"
-        ToolTipItem18.LeftIndent = 6
-        ToolTipItem18.Text = "Open parent directory of give GSTR2A File in explorer"
-        SuperToolTip18.Items.Add(ToolTipTitleItem18)
-        SuperToolTip18.Items.Add(ToolTipItem18)
-        Me.btn_Menu_Open_GSTR2A_Folder.SuperTip = SuperToolTip18
+        ToolTipTitleItem9.Text = "Open Folder of GSTR2A File"
+        ToolTipItem9.LeftIndent = 6
+        ToolTipItem9.Text = "Open parent directory of give GSTR2A File in explorer"
+        SuperToolTip9.Items.Add(ToolTipTitleItem9)
+        SuperToolTip9.Items.Add(ToolTipItem9)
+        Me.btn_Menu_Open_GSTR2A_Folder.SuperTip = SuperToolTip9
         '
         'rp_Home
         '
@@ -235,18 +235,18 @@ Partial Class frm_Main
         '
         'rpg_CompareList
         '
+        Me.rpg_CompareList.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.rpg_CompareList.ItemLinks.Add(Me.btn_Add)
         Me.rpg_CompareList.ItemLinks.Add(Me.btn_Edit)
         Me.rpg_CompareList.ItemLinks.Add(Me.btn_Remove)
         Me.rpg_CompareList.Name = "rpg_CompareList"
-        Me.rpg_CompareList.ShowCaptionButton = False
         Me.rpg_CompareList.Text = "Comapre List"
         '
         'rpg_Compare
         '
+        Me.rpg_Compare.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
         Me.rpg_Compare.ItemLinks.Add(Me.btn_Compare)
         Me.rpg_Compare.Name = "rpg_Compare"
-        Me.rpg_Compare.ShowCaptionButton = False
         Me.rpg_Compare.Text = "Compare"
         '
         'rpg_Misc
@@ -257,10 +257,10 @@ Partial Class frm_Main
         '
         'RibbonStatusBar
         '
-        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 418)
+        Me.RibbonStatusBar.Location = New System.Drawing.Point(0, 425)
         Me.RibbonStatusBar.Name = "RibbonStatusBar"
         Me.RibbonStatusBar.Ribbon = Me.RibbonControl
-        Me.RibbonStatusBar.Size = New System.Drawing.Size(699, 31)
+        Me.RibbonStatusBar.Size = New System.Drawing.Size(699, 24)
         '
         'gc_CompareList
         '
@@ -269,7 +269,7 @@ Partial Class frm_Main
         Me.gc_CompareList.MainView = Me.gv_CompareList
         Me.gc_CompareList.MenuManager = Me.RibbonControl
         Me.gc_CompareList.Name = "gc_CompareList"
-        Me.gc_CompareList.Size = New System.Drawing.Size(693, 247)
+        Me.gc_CompareList.Size = New System.Drawing.Size(697, 242)
         Me.gc_CompareList.TabIndex = 5
         Me.gc_CompareList.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_CompareList})
         '
@@ -302,10 +302,10 @@ Partial Class frm_Main
         '
         Me.tc_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tc_Main.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Bottom
-        Me.tc_Main.Location = New System.Drawing.Point(0, 143)
+        Me.tc_Main.Location = New System.Drawing.Point(0, 158)
         Me.tc_Main.Name = "tc_Main"
         Me.tc_Main.SelectedTabPage = Me.tp_CompareItems
-        Me.tc_Main.Size = New System.Drawing.Size(699, 275)
+        Me.tc_Main.Size = New System.Drawing.Size(699, 267)
         Me.tc_Main.TabIndex = 11
         Me.tc_Main.TabPages.AddRange(New DevExpress.XtraTab.XtraTabPage() {Me.tp_CompareItems, Me.tp_GSTR2, Me.tp_GSTR2A})
         '
@@ -313,14 +313,14 @@ Partial Class frm_Main
         '
         Me.tp_CompareItems.Controls.Add(Me.gc_CompareList)
         Me.tp_CompareItems.Name = "tp_CompareItems"
-        Me.tp_CompareItems.Size = New System.Drawing.Size(693, 247)
+        Me.tp_CompareItems.Size = New System.Drawing.Size(697, 242)
         Me.tp_CompareItems.Text = "Compare Items"
         '
         'tp_GSTR2
         '
         Me.tp_GSTR2.Controls.Add(Me.gc_GSTR2)
         Me.tp_GSTR2.Name = "tp_GSTR2"
-        Me.tp_GSTR2.Size = New System.Drawing.Size(693, 247)
+        Me.tp_GSTR2.Size = New System.Drawing.Size(697, 242)
         Me.tp_GSTR2.Text = "GSTR2"
         '
         'gc_GSTR2
@@ -330,7 +330,7 @@ Partial Class frm_Main
         Me.gc_GSTR2.MainView = Me.gv_GSTR2
         Me.gc_GSTR2.MenuManager = Me.RibbonControl
         Me.gc_GSTR2.Name = "gc_GSTR2"
-        Me.gc_GSTR2.Size = New System.Drawing.Size(693, 247)
+        Me.gc_GSTR2.Size = New System.Drawing.Size(697, 242)
         Me.gc_GSTR2.TabIndex = 6
         Me.gc_GSTR2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_GSTR2})
         '
@@ -350,7 +350,7 @@ Partial Class frm_Main
         '
         Me.tp_GSTR2A.Controls.Add(Me.gc_GSTR2A)
         Me.tp_GSTR2A.Name = "tp_GSTR2A"
-        Me.tp_GSTR2A.Size = New System.Drawing.Size(693, 247)
+        Me.tp_GSTR2A.Size = New System.Drawing.Size(697, 242)
         Me.tp_GSTR2A.Text = "GSTR2A"
         '
         'gc_GSTR2A
@@ -360,7 +360,7 @@ Partial Class frm_Main
         Me.gc_GSTR2A.MainView = Me.gv_GSTR2A
         Me.gc_GSTR2A.MenuManager = Me.RibbonControl
         Me.gc_GSTR2A.Name = "gc_GSTR2A"
-        Me.gc_GSTR2A.Size = New System.Drawing.Size(693, 247)
+        Me.gc_GSTR2A.Size = New System.Drawing.Size(697, 242)
         Me.gc_GSTR2A.TabIndex = 6
         Me.gc_GSTR2A.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gv_GSTR2A})
         '
@@ -393,11 +393,10 @@ Partial Class frm_Main
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(699, 449)
-        Me.Controls.Add(Me.ProgressPanel_Loading)
         Me.Controls.Add(Me.tc_Main)
         Me.Controls.Add(Me.RibbonStatusBar)
         Me.Controls.Add(Me.RibbonControl)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.IconOptions.Icon = CType(resources.GetObject("frm_Main.IconOptions.Icon"), System.Drawing.Icon)
         Me.Name = "frm_Main"
         Me.Ribbon = Me.RibbonControl
         Me.StatusBar = Me.RibbonStatusBar
